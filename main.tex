@@ -1,0 +1,75 @@
+% This file (thesis-main.tex) is the main file for a master's thesis.
+\documentclass {udthesis}
+% preamble
+
+% Include graphicx package for the example image used
+% Use LaTeX->PDF if including graphics such as .jpg, .png or .pdf.
+% Use LaTeX->PS->PDF if including graphics such as .ps or .eps
+% Best practice to not specify the file extension for included images,
+% so when LaTeX is building it will look for the appropriate image type.
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{siunitx}
+\usepackage{subscript}
+\usepackage{flexisym}
+\usepackage{hyperref}
+%\usepackage{tikz}
+\DeclareSIUnit\Molar{\textsc{m}}
+\DeclareSIUnit\Units{\textsc{u}}
+\begin{document}
+%					THESIS - TAP ( T I T L E  +  A P P R O V A L )
+\include{thesis-tap}
+
+                   % This file (thesis-tap.tex) contains the Title
+                   % and Approval Page information for a master's thesis.
+
+%					C H A P T E R   1 - Introduction
+
+%\include{introduction}    % This file (introduction.tex) contains the text
+                   % for Chapter 1- the introduction
+                   
+%					C H A P T E R   2 - Methods
+\include{methods}    % This file (methods.tex) contains the text
+                   % for Chapter 2- methods
+
+%					C H A P T E R   3 - Results
+\include{results}    % This file (results.tex) contains the text
+                   % for Chapter 3- results
+
+
+%					C H A P T E R   4 - Discussion
+\include{discussion}    % This file (discussion.tex) contains the text
+                   % for Chapter 4- discussion
+
+%					C H A P T E R   5 - Conclusions
+
+
+\include{conclusions}    % This file (conclusions.tex) contains the text
+                   % for Chapter 5- conclusions
+
+
+%					R E F E R E N C E S
+%\include{ref}      % This file (ref.tex) contains the text
+                   % for the references.
+                   
+%\include{bib}      % This file (bib.tex) contains the text
+                   % for a bibliography.
+                                      
+\include{bibtex}	 % This file (bibtex.tex) contains the text
+                   % for a bibliography if using BibTeX with
+                   % sample.bib
+                                      
+%\include{app}      % This file (app.tex) contains the text
+                   % for one Appendix. 
+
+%			A P P E N D I X      A
+%\include{appA}     % This file (appA.tex) contains the text
+                   % for Appendix A. 
+ 
+ %			A P P E N D I X      B
+%\include{appB}     % This file (appB.tex) contains the text
+                   % for Appendix B.   
+       
+\end{document}

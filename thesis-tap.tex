@@ -1,0 +1,65 @@
+% 
+% This is the Title and Approval Page file (thesis-tap.tex) for
+% a master's thesis.
+%
+% The order of the commands below is very important.
+% You may choose to add or eliminate a \prefacesection 
+% in the front material but the order should remain 
+% the same especially \maketocloflot followed by 
+% \prefacesectiontoc{Abstract}
+
+% Title and author are also used for PDF file properties
+% No special character or commands can be used for the PDF definition; 
+% use the [options] paramater to specify a different title or author 
+% to remove special characters or commands like \\ for example.
+\title[How to Eat and Lose Weight: A Second Look]{How To Eat and Lose Weight:\\
+A Second Look}
+\author{Sue Dunham}
+\type{thesis}
+\degree{Master of Science}
+\majorfieldtrue\majorfield{Bioinformatics and Computational Biology}
+\degreedate{Summer 2014}
+% Optional PDF properties
+\keywords{diet,weight,fat}
+\subject{Master of Science in Bioinformatics and Computational Biology}
+
+\maketitlepage % Generates Title Page
+
+\begin{approvalpage}
+\prof{Eleftherios T. Papoutsakis, Ph.D.}
+\chair{Fats Domino, Ph.D.}{Chair of the Department of Nutrition}
+\dean{Minnesota Fats, Ph.D.}{Dean of the College of Hard Knockwurst}
+\end{approvalpage}
+
+\begin{front} % Starts front material (Roman style page numbers)
+
+\prefacesection{Acknowledgments}
+
+%					A C K N O W L E D G E M E N T S
+\input{acknowl} % This file (acknowl.tex) contains the text
+                % for the acknowledgments.
+
+
+% Table of Contents is always created, but you
+% may set \tablespagefalse and \figurespagefalse 
+% if you don't want these generated automatically
+% (i.e. List of Tables and List of Figures).
+% These are set to true by default (i.e. \tablespagetrue,
+% \figurespagetrue).
+
+% Uncomment if you do not want a List of Figures.
+%\figurespagefalse
+
+% Uncomment if you do not want a List of Tables.
+%\tablespagefalse 
+
+\maketocloflot
+
+\prefacesectiontoc{Abstract}
+
+%					A B S T A C T
+%\input{abstract} % This file (abstract.tex) contains the text
+                 % for an abstract.
+
+\end{front}
+
