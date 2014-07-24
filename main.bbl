@@ -1,0 +1,277 @@
+\begin{thebibliography}{10}
+
+\bibitem{1}
+Keith~V Alsaker, Thomas~R Spitzer, and Eleftherios~T Papoutsakis.
+\newblock Transcriptional analysis of spo0a overexpression in clostridium
+  acetobutylicum and its effect on the cell's response to butanol stress.
+\newblock {\em Journal of bacteriology}, 186(7):1959--1971, 2004.
+
+\bibitem{2}
+S~Andrews.
+\newblock Fastqc: A quality control tool for high throughput sequence data.
+\newblock {\em Reference Source}, 2010.
+
+\bibitem{3}
+Dominik Antoni, Vladimir~V Zverlov, and Wolfgang~H Schwarz.
+\newblock Biofuels from microbes.
+\newblock {\em Applied microbiology and biotechnology}, 77(1):23--35, 2007.
+
+\bibitem{4}
+Shota Atsumi, Anthony~F Cann, Michael~R Connor, Claire~R Shen, Kevin~M Smith,
+  Mark~P Brynildsen, Katherine~JY Chou, Taizo Hanai, and James~C Liao.
+\newblock Metabolic engineering of< i> escherichia coli</i> for 1-butanol
+  production.
+\newblock {\em Metabolic engineering}, 10(6):305--311, 2008.
+
+\bibitem{5}
+Timothy~L Bailey, Mikael Boden, Fabian~A Buske, Martin Frith, Charles~E Grant,
+  Luca Clementi, Jingyuan Ren, Wilfred~W Li, and William~S Noble.
+\newblock Meme suite: tools for motif discovery and searching.
+\newblock {\em Nucleic acids research}, 37(suppl 2):W202--W208, 2009.
+
+\bibitem{6}
+Jacob~R Borden and Eleftherios~Terry Papoutsakis.
+\newblock Dynamics of genomic-library enrichment and identification of solvent
+  tolerance genes for clostridium acetobutylicum.
+\newblock {\em Applied and environmental microbiology}, 73(9):3061--3068, 2007.
+
+\bibitem{7}
+Yili Chen, Dinesh~C Indurthi, Shawn~W Jones, and Eleftherios~T Papoutsakis.
+\newblock Small rnas in the genus clostridium.
+\newblock {\em MBio}, 2(1):e00340--10, 2011.
+
+\bibitem{8}
+Patrik D’haeseleer, Shoudan Liang, and Roland Somogyi.
+\newblock Genetic network inference: from co-expression clustering to reverse
+  engineering.
+\newblock {\em Bioinformatics}, 16(8):707--726, 2000.
+
+\bibitem{9}
+A~Gordon and GJ~Hannon.
+\newblock Fastx-toolkit.
+\newblock {\em FASTQ short-reads pre-processing tools}, 2010.
+
+\bibitem{10}
+Michael Hecker, Sandro Lambeck, Susanne Toepfer, Eugene Van~Someren, and
+  Reinhard Guthke.
+\newblock Gene regulatory network inference: data integration in dynamic
+  models—a review.
+\newblock {\em Biosystems}, 96(1):86--103, 2009.
+
+\bibitem{11}
+Michael Hecker, Wolfgang Schumann, and Uwe Völker.
+\newblock Heat‐shock and general stress response in bacillus subtilis.
+\newblock {\em Molecular microbiology}, 19(3):417--428, 1996.
+
+\bibitem{12}
+Eric~CH Ho, Michael~E Donaldson, and Barry~J Saville.
+\newblock {\em Detection of antisense RNA transcripts by strand-specific
+  RT-PCR}, pages 125--138.
+\newblock Springer, 2010.
+
+\bibitem{13}
+Jay~D Keasling, Abraham Mendoza, and Phil~S Baran.
+\newblock Synthesis: A constructive debate.
+\newblock {\em Nature}, 492(7428):188--189, 2012.
+
+\bibitem{14}
+Donghyuk Kim, Jay Sung-Joong Hong, Yu~Qiu, Harish Nagarajan, Joo-Hyun Seo,
+  Byung-Kwan Cho, Shih-Feng Tsai, and Bernhard~Ø Palsson.
+\newblock Comparative analysis of regulatory elements between escherichia coli
+  and klebsiella pneumoniae by genome-wide transcription start site profiling.
+\newblock {\em PLoS genetics}, 8(8):e1002867, 2012.
+
+\bibitem{15}
+Clemens Kreutz, JS~Gehring, D~Lang, Ralf Reski, Jens Timmer, and Stefan~A
+  Rensing.
+\newblock Tssi—an r package for transcription start site identification from
+  5′ mrna tag data.
+\newblock {\em Bioinformatics}, 28(12):1641--1642, 2012.
+
+\bibitem{16}
+Ethan~I Lan and James~C Liao.
+\newblock Metabolic engineering of cyanobacteria for 1-butanol production from
+  carbon dioxide.
+\newblock {\em Metabolic engineering}, 13(4):353--363, 2011.
+
+\bibitem{17}
+Ben Langmead and Steven~L Salzberg.
+\newblock Fast gapped-read alignment with bowtie 2.
+\newblock {\em Nature methods}, 9(4):357--359, 2012.
+
+\bibitem{18}
+Joshua~Z Levin, Moran Yassour, Xian Adiconis, Chad Nusbaum, Dawn~Anne Thompson,
+  Nir Friedman, Andreas Gnirke, and Aviv Regev.
+\newblock Comprehensive comparative analysis of strand-specific rna sequencing
+  methods.
+\newblock {\em Nature methods}, 7(9):709--715, 2010.
+
+\bibitem{19}
+Heng Li, Bob Handsaker, Alec Wysoker, Tim Fennell, Jue Ruan, Nils Homer, Gabor
+  Marth, Goncalo Abecasis, and Richard Durbin.
+\newblock The sequence alignment/map format and samtools.
+\newblock {\em Bioinformatics}, 25(16):2078--2079, 2009.
+
+\bibitem{20}
+Ronny Lorenz, Stephan~HF Bernhart, Christian~Hoener Zu~Siederdissen, Hakim
+  Tafer, Christoph Flamm, Peter~F Stadler, and Ivo~L Hofacker.
+\newblock Viennarna package 2.0.
+\newblock {\em Algorithms for Molecular Biology}, 6(1):26, 2011.
+
+\bibitem{21}
+Marloes~H Maathuis, Diego Colombo, Markus Kalisch, and Peter Bühlmann.
+\newblock Predicting causal effects in large-scale systems from observational
+  data.
+\newblock {\em Nature Methods}, 7(4):247--248, 2010.
+
+\bibitem{22}
+Florian Markowetz, Dennis Kostka, Olga~G Troyanskaya, and Rainer Spang.
+\newblock Nested effects models for high-dimensional phenotyping screens.
+\newblock {\em Bioinformatics}, 23(13):i305--i312, 2007.
+
+\bibitem{23}
+G~Najoshi.
+\newblock Sickle-a windowed adaptive trimming tool for fastq files using
+  quality.
+
+\bibitem{24}
+Sergios~A Nicolaou, Stefan~M Gaida, and Eleftherios~T Papoutsakis.
+\newblock A comparative view of metabolite and substrate stress and tolerance
+  in microbial bioprocessing: from biofuels and chemicals, to biocatalysis and
+  bioremediation.
+\newblock {\em Metabolic engineering}, 12(4):307--331, 2010.
+
+\bibitem{25}
+Fatih Ozsolak and Patrice~M Milos.
+\newblock Rna sequencing: advances, challenges and opportunities.
+\newblock {\em Nature reviews genetics}, 12(2):87--98, 2011.
+
+\bibitem{26}
+Eleftherios~T Papoutsakis.
+\newblock Engineering solventogenic clostridia.
+\newblock {\em Current opinion in biotechnology}, 19(5):420--429, 2008.
+
+\bibitem{27}
+Christophe Pichon and Brice Felden.
+\newblock Small rna gene identification and mrna target predictions in
+  bacteria.
+\newblock {\em Bioinformatics}, 24(24):2807--2813, 2008.
+
+\bibitem{28}
+Yosef Prat, Menachem Fromer, Nathan Linial, and Michal Linial.
+\newblock Recovering key biological constituents through sparse representation
+  of gene expression.
+\newblock {\em Bioinformatics}, 27(5):655--661, 2011.
+
+\bibitem{29}
+Juan~L Ramos, Estrella Duque, María-Trinidad Gallegos, Patricia Godoy,
+  María~Isabel Ramos-González, Antonia Rojas, Wilson Terán, and Ana Segura.
+\newblock Mechanisms of solvent tolerance in gram-negative bacteria.
+\newblock {\em Annual Reviews in Microbiology}, 56(1):743--768, 2002.
+
+\bibitem{30}
+Adam Roberts, Harold Pimentel, Cole Trapnell, and Lior Pachter.
+\newblock Identification of novel transcripts in annotated genomes using
+  rna-seq.
+\newblock {\em Bioinformatics}, 27(17):2325--2329, 2011.
+
+\bibitem{31}
+Tobias Sahr, Christophe Rusniok, Delphine Dervins-Ravault, Odile Sismeiro,
+  Jean-Yves Coppee, and Carmen Buchrieser.
+\newblock Deep sequencing defines the transcriptional map of l. pneumophila and
+  identifies growth phase-dependent regulated ncrnas implicated in virulence.
+\newblock {\em RNA Biol}, 9(4):503--519, 2012.
+
+\bibitem{32}
+Yogita Sardessai and Saroj Bhosle.
+\newblock Tolerance of bacteria to organic solvents.
+\newblock {\em Research in Microbiology}, 153(5):263--268, 2002.
+
+\bibitem{33}
+Robert Schmieder and Robert Edwards.
+\newblock Quality control and preprocessing of metagenomic datasets.
+\newblock {\em Bioinformatics}, 27(6):863--864, 2011.
+
+\bibitem{34}
+Olga~A Soutourina, Marc Monot, Pierre Boudry, Laure Saujet, Christophe Pichon,
+  Odile Sismeiro, Ekaterina Semenova, Konstantin Severinov, Chantal
+  Le~Bouguenec, and Jean-Yves Coppée.
+\newblock Genome-wide identification of regulatory rnas in the human pathogen
+  clostridium difficile.
+\newblock {\em PLoS genetics}, 9(5):e1003493, 2013.
+
+\bibitem{35}
+Morgane Thomas-Chollier, Matthieu Defrance, Alejandra Medina-Rivera, Olivier
+  Sand, Carl Herrmann, Denis Thieffry, and Jacques van Helden.
+\newblock Rsat 2011: regulatory sequence analysis tools.
+\newblock {\em Nucleic acids research}, 39(suppl 2):W86--W91, 2011.
+
+\bibitem{36}
+Christopher~A Tomas, Jeffrey Beamish, and Eleftherios~T Papoutsakis.
+\newblock Transcriptional analysis of butanol stress and tolerance in
+  clostridium acetobutylicum.
+\newblock {\em Journal of bacteriology}, 186(7):2006--2018, 2004.
+
+\bibitem{37}
+Bryan~P Tracy, Shawn~W Jones, Alan~G Fast, Dinesh~C Indurthi, and Eleftherios~T
+  Papoutsakis.
+\newblock Clostridia: the importance of their exceptional substrate and
+  metabolite diversity for biofuel and biorefinery applications.
+\newblock {\em Current opinion in biotechnology}, 23(3):364--381, 2012.
+
+\bibitem{38}
+Charles~J Vaske, Stephen~C Benz, J~Zachary Sanborn, Dent Earl, Christopher
+  Szeto, Jingchun Zhu, David Haussler, and Joshua~M Stuart.
+\newblock Inference of patient-specific pathway activities from
+  multi-dimensional cancer genomics data using paradigm.
+\newblock {\em Bioinformatics}, 26(12):i237--i245, 2010.
+
+\bibitem{39}
+Keerthi~P Venkataramanan, Shawn~W Jones, Kevin~P McCormick, Sridhara~G Kunjeti,
+  Matthew~T Ralston, Blake~C Meyers, and Eleftherios~T Papoutsakis.
+\newblock The clostridium small rnome that responds to stress: the paradigm and
+  importance of toxic metabolite stress in c. acetobutylicum.
+\newblock {\em BMC genomics}, 14(1):849, 2013.
+
+\bibitem{40}
+Alec W.
+\newblock Picard, 2009.
+
+\bibitem{41}
+E~Gerhart~H Wagner.
+\newblock Kill the messenger: bacterial antisense rna promotes mrna decay.
+\newblock {\em Nature structural and molecular biology}, 16(8):804--806, 2009.
+
+\bibitem{42}
+Qinghua Wang, Keerthi~Prasad Venkataramanan, Hongzhan Huang, Eleftherios~T
+  Papoutsakis, and Cathy~H Wu.
+\newblock Transcription factors and genetic circuits orchestrating the complex,
+  multilayered response of clostridium acetobutylicum to butanol and butyrate
+  stress.
+\newblock {\em BMC systems biology}, 7(1):120, 2013.
+
+\bibitem{43}
+Ka~Yee Yeung and Walter~L. Ruzzo.
+\newblock Principal component analysis for clustering gene expression data.
+\newblock {\em Bioinformatics}, 17(9):763--774, 2001.
+
+\bibitem{44}
+Yong Zhang, Tao Liu, Clifford~A Meyer, Jérôme Eeckhoute, David~S Johnson,
+  Bradley~E Bernstein, Chad Nusbaum, Richard~M Myers, Myles Brown, and Wei Li.
+\newblock Model-based analysis of chip-seq (macs).
+\newblock {\em Genome Biol}, 9(9):R137, 2008.
+
+\bibitem{45}
+Kyle~A Zingaro and Eleftherios~Terry Papoutsakis.
+\newblock Toward a semisynthetic stress response system to engineer microbial
+  solvent tolerance.
+\newblock {\em Mbio}, 3(5):e00308--12, 2012.
+
+\bibitem{46}
+Kyle~A Zingaro and Eleftherios Terry~Papoutsakis.
+\newblock Groesl overexpression imparts< i> escherichia coli</i> tolerance to<
+  i> i</i>-,< i> n</i>-, and 2-butanol, 1, 2, 4-butanetriol and ethanol with
+  complex and unpredictable patterns.
+\newblock {\em Metabolic engineering}, 15:196--205, 2013.
+
+\end{thebibliography}
