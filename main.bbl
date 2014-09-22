@@ -1,5 +1,85 @@
 \begin{thebibliography}{10}
 
+\bibitem{39}
+Keerthi~P Venkataramanan, Shawn~W Jones, Kevin~P McCormick, Sridhara~G Kunjeti,
+  Matthew~T Ralston, Blake~C Meyers, and Eleftherios~T Papoutsakis.
+\newblock The clostridium small rnome that responds to stress: the paradigm and
+  importance of toxic metabolite stress in c. acetobutylicum.
+\newblock {\em BMC genomics}, 14(1):849, 2013.
+
+\bibitem{47}
+Anthony~M Bolger, Marc Lohse, and Bjoern Usadel.
+\newblock Trimmomatic: a flexible trimmer for illumina sequence data.
+\newblock {\em Bioinformatics}, page 170, 2014.
+
+\bibitem{17}
+Ben Langmead and Steven~L Salzberg.
+\newblock Fast gapped-read alignment with bowtie 2.
+\newblock {\em Nature methods}, 9(4):357--359, 2012.
+
+\bibitem{19}
+Heng Li, Bob Handsaker, Alec Wysoker, Tim Fennell, Jue Ruan, Nils Homer, Gabor
+  Marth, Goncalo Abecasis, and Richard Durbin.
+\newblock The sequence alignment/map format and samtools.
+\newblock {\em Bioinformatics}, 25(16):2078--2079, 2009.
+
+\bibitem{40}
+Alec W.
+\newblock Picard, 2009.
+
+\bibitem{58}
+Manfred~G Grabherr, Brian~J Haas, Moran Yassour, Joshua~Z Levin, Dawn~A
+  Thompson, Ido Amit, Xian Adiconis, Lin Fan, Raktima Raychowdhury, Qiandong
+  Zeng, et~al.
+\newblock Full-length transcriptome assembly from rna-seq data without a
+  reference genome.
+\newblock {\em Nature biotechnology}, 29(7):644--652, 2011.
+
+\bibitem{49}
+Aaron~R Quinlan and Ira~M Hall.
+\newblock Bedtools: a flexible suite of utilities for comparing genomic
+  features.
+\newblock {\em Bioinformatics}, 26(6):841--842, 2010.
+
+\bibitem{59}
+{R Core Team}.
+\newblock {\em R: A Language and Environment for Statistical Computing}.
+\newblock R Foundation for Statistical Computing, Vienna, Austria, 2014.
+
+\bibitem{15}
+Clemens Kreutz, JS~Gehring, D~Lang, Ralf Reski, Jens Timmer, and Stefan~A
+  Rensing.
+\newblock Tssi—an r package for transcription start site identification from
+  5′ mrna tag data.
+\newblock {\em Bioinformatics}, 28(12):1641--1642, 2012.
+
+\bibitem{48}
+Simon Anders.
+\newblock Htseq: Analysing high-throughput sequencing data with python.
+\newblock {\em URL http://www-huber. embl. de/users/anders/HTSeq/doc/overview.
+  html}, 2010.
+
+\bibitem{52}
+Michael~I Love, Wolfgang Huber, and Simon Anders.
+\newblock Moderated estimation of fold change and dispersion for rna-seq data
+  with deseq2.
+\newblock {\em bioRxiv}, 2014.
+
+\bibitem{53}
+Simon Anders and Wolfgang Huber.
+\newblock Differential expression analysis for sequence count data.
+\newblock {\em Genome biol}, 11(10):R106, 2010.
+
+\bibitem{55}
+Hadley Wickham.
+\newblock {\em ggplot2: elegant graphics for data analysis}.
+\newblock Springer, 2009.
+
+\bibitem{50}
+et~al. Krzywinski, Martin.
+\newblock Circos: an information aesthetic for comparative genomics.
+\newblock {\em Genome research}, 19(9):1639--1645, 2009.
+
 \bibitem{1}
 Keith~V Alsaker, Thomas~R Spitzer, and Eleftherios~T Papoutsakis.
 \newblock Transcriptional analysis of spo0a overexpression in clostridium
@@ -81,23 +161,11 @@ Donghyuk Kim, Jay Sung-Joong Hong, Yu~Qiu, Harish Nagarajan, Joo-Hyun Seo,
   and klebsiella pneumoniae by genome-wide transcription start site profiling.
 \newblock {\em PLoS genetics}, 8(8):e1002867, 2012.
 
-\bibitem{15}
-Clemens Kreutz, JS~Gehring, D~Lang, Ralf Reski, Jens Timmer, and Stefan~A
-  Rensing.
-\newblock Tssi—an r package for transcription start site identification from
-  5′ mrna tag data.
-\newblock {\em Bioinformatics}, 28(12):1641--1642, 2012.
-
 \bibitem{16}
 Ethan~I Lan and James~C Liao.
 \newblock Metabolic engineering of cyanobacteria for 1-butanol production from
   carbon dioxide.
 \newblock {\em Metabolic engineering}, 13(4):353--363, 2011.
-
-\bibitem{17}
-Ben Langmead and Steven~L Salzberg.
-\newblock Fast gapped-read alignment with bowtie 2.
-\newblock {\em Nature methods}, 9(4):357--359, 2012.
 
 \bibitem{18}
 Joshua~Z Levin, Moran Yassour, Xian Adiconis, Chad Nusbaum, Dawn~Anne Thompson,
@@ -105,12 +173,6 @@ Joshua~Z Levin, Moran Yassour, Xian Adiconis, Chad Nusbaum, Dawn~Anne Thompson,
 \newblock Comprehensive comparative analysis of strand-specific rna sequencing
   methods.
 \newblock {\em Nature methods}, 7(9):709--715, 2010.
-
-\bibitem{19}
-Heng Li, Bob Handsaker, Alec Wysoker, Tim Fennell, Jue Ruan, Nils Homer, Gabor
-  Marth, Goncalo Abecasis, and Richard Durbin.
-\newblock The sequence alignment/map format and samtools.
-\newblock {\em Bioinformatics}, 25(16):2078--2079, 2009.
 
 \bibitem{20}
 Ronny Lorenz, Stephan~HF Bernhart, Christian~Hoener Zu~Siederdissen, Hakim
@@ -226,17 +288,6 @@ Charles~J Vaske, Stephen~C Benz, J~Zachary Sanborn, Dent Earl, Christopher
   multi-dimensional cancer genomics data using paradigm.
 \newblock {\em Bioinformatics}, 26(12):i237--i245, 2010.
 
-\bibitem{39}
-Keerthi~P Venkataramanan, Shawn~W Jones, Kevin~P McCormick, Sridhara~G Kunjeti,
-  Matthew~T Ralston, Blake~C Meyers, and Eleftherios~T Papoutsakis.
-\newblock The clostridium small rnome that responds to stress: the paradigm and
-  importance of toxic metabolite stress in c. acetobutylicum.
-\newblock {\em BMC genomics}, 14(1):849, 2013.
-
-\bibitem{40}
-Alec W.
-\newblock Picard, 2009.
-
 \bibitem{41}
 E~Gerhart~H Wagner.
 \newblock Kill the messenger: bacterial antisense rna promotes mrna decay.
@@ -269,9 +320,31 @@ Kyle~A Zingaro and Eleftherios~Terry Papoutsakis.
 
 \bibitem{46}
 Kyle~A Zingaro and Eleftherios Terry~Papoutsakis.
-\newblock Groesl overexpression imparts< i> escherichia coli</i> tolerance to<
-  i> i</i>-,< i> n</i>-, and 2-butanol, 1, 2, 4-butanetriol and ethanol with
-  complex and unpredictable patterns.
+\newblock Groesl overexpression imparts escherichia coli tolerance to, n-, and
+  2-butanol, 1, 2, 4-butanetriol and ethanol with complex and unpredictable
+  patterns.
 \newblock {\em Metabolic engineering}, 15:196--205, 2013.
+
+\bibitem{51}
+Helga Thorvaldsd{\'o}ttir, James~T Robinson, and Jill~P Mesirov.
+\newblock Integrative genomics viewer (igv): high-performance genomics data
+  visualization and exploration.
+\newblock {\em Briefings in bioinformatics}, page bbs017, 2012.
+
+\bibitem{54}
+Eric~P Nawrocki and Sean~R Eddy.
+\newblock Infernal 1.1: 100-fold faster rna homology searches.
+\newblock {\em Bioinformatics}, 29(22):2933--2935, 2013.
+
+\bibitem{56}
+Wei Zheng, Lisa~M Chung, and Hongyu Zhao.
+\newblock Bias detection and correction in rna-sequencing data.
+\newblock {\em Bmc Bioinformatics}, 12(1):290, 2011.
+
+\bibitem{57}
+Shawn O’Neil and Scott Emrich.
+\newblock Assessing de novo transcriptome assembly metrics for consistency and
+  utility.
+\newblock {\em BMC genomics}, 14(1):465, 2013.
 
 \end{thebibliography}
