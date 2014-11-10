@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  14 AUG 2014 16:39
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  9 NOV 2014 23:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -635,7 +635,44 @@ Package natbib Warning: The `cite' package should not be used
 LaTeX Info: Redefining \cite on input line 694.
 LaTeX Info: Redefining \citenum on input line 708.
 \c@NAT@ctr=\count152
-) (./main.aux (./thesis-tap.aux) (./methods.aux) (./results.aux)
+) (/usr/local/texlive/2013/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen155
+\captionmargin@=\dimen156
+\captionwidth=\dimen157
+\caption@tempdima=\dimen158
+\caption@indent=\dimen159
+\caption@parindent=\dimen160
+\caption@hangindent=\dimen161
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = \long macro:#1#2->\vspace *{1.5\baselines
+kip } \setbox 0=\hbox {{\bfseries #1:\enspace }} \setbox \@tempboxa \hbox {{\bf
+series #1:\enspace }#2} \ifdim \wd \@tempboxa >\hsize \hangindent \wd 0\unhcopy
+ 0#2\par \else \hbox to\hsize {\hfil \box \@tempboxa \hfil }\vspace *{\baseline
+skip } \fi .
+\c@ContinuedFloat=\count153
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: hypcap package is loaded.
+)
+\c@subfigure=\count154
+\c@subtable=\count155
+) (./main.aux (./thesis-tap.aux) (./introduction.aux) (./Background.aux)
+(./methods.aux) (./sequencing.aux) (./assembly.aux) (./Expression.aux)
 (./discussion.aux) (./conclusions.aux) (./bibtex.aux))
 \openout1 = `main.aux'.
 
@@ -671,7 +708,7 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count153
+\c@section@level=\count156
 )
 LaTeX Info: Redefining \ref on input line 23.
 LaTeX Info: Redefining \pageref on input line 23.
@@ -684,16 +721,16 @@ LaTeX Info: Redefining \nameref on input line 23.
 
 (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count154
-\scratchdimen=\dimen155
+\scratchcounter=\count157
+\scratchdimen=\dimen162
 \scratchbox=\box51
-\nofMPsegments=\count155
-\nofMParguments=\count156
+\nofMPsegments=\count158
+\nofMParguments=\count159
 \everyMPshowfont=\toks20
-\MPscratchCnt=\count157
-\MPscratchDim=\dimen156
-\MPnumerator=\count158
-\makeMPintoPDFobject=\count159
+\MPscratchCnt=\count160
+\MPscratchDim=\dimen163
+\MPnumerator=\count161
+\makeMPintoPDFobject=\count162
 \everyMPtoPDFconversion=\toks21
 ) (/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
@@ -718,14 +755,16 @@ Dictionary: translator-basic-dictionary, Language: English
 ons.cfg
 File: siunitx-abbreviations.cfg 2013/03/11 v2.5q siunitx: Abbreviated units
 )
-\c__siunitx_mathsf_int=\count160
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+\c__siunitx_mathsf_int=\count163
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 23.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 23.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 23.
-\c__siunitx_mathtt_int=\count161
+\c__siunitx_mathtt_int=\count164
 \openout2 = `thesis-tap.aux'.
 
  (./thesis-tap.tex
@@ -743,13 +782,13 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 acknowl.tex
 [3
 
-]) [4] (./main.toc)
+]) [4] (./main.toc [5
+
+])
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- [5
-
-]
+ [6]
 
 Package hyperref Warning: bookmark level for unknown prefacesection defaults to
  0.
@@ -758,60 +797,163 @@ Package hyperref Warning: bookmark level for unknown prefacesection defaults to
 \tf@lot=\write5
 \openout5 = `main.lot'.
 
- [6
+ [7
 
 ] (./main.lof)
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
- [7
+ [8
 
-] [8
+] [9
 
 ])
+\openout2 = `introduction.aux'.
+
+ (./introduction.tex
+Chapter 1.
+
+Overfull \hbox (9.22987pt too wide) in paragraph at lines 10--11
+[]\OT1/cmr/m/n/12 Leading sci-en-tists and en-gi-neers (Liao, S.y.Lee, Pa-pout-
+sakis) rec-og-nize Clostridum
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.14 
+      [1
+
+
+
+])pdfTeX warning (ext4): destination with the same identifier (name{page.2}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.32 \include{introduction}
+                               % This file (introduction.tex) contains the text
+[2]
+\openout2 = `Background.aux'.
+
+ (./Background.tex
+Chapter 2.
+[3
+
+
+
+] [4] [5]
+Overfull \hbox (32.08516pt too wide) in paragraph at lines 29--30
+\OT1/cmr/m/n/12 creased lev-els of the amino acid are ob-served in a cell, typ-
+i-cally by ri-boreg-u-la-tors/riboswitches.
+ []
+
+[6] [7]) [8]
 \openout2 = `methods.aux'.
 
  (./methods.tex
-Chapter 1.
+Chapter 3.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 10.
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.12 N
-      ext, \SI{700}{\micro\liter} of RWT buffer was added to the column, bef...
-[1
+) [9
 
 
 
-]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.20 
-      [2] [3] [4] [5]) [6]
-\openout2 = `results.aux'.
+] [10] [11]
+[12] [13]
+Overfull \hbox (58.70157pt too wide) in paragraph at lines 39--40
+\OT1/cmr/m/n/12 with my hrefhttps://github.com/MatthewRalston/OPTICS-Automatic-
+Clusteringimplementation
+ []
 
- (./results.tex
-Chapter 2.
-<images/Gene_dispersion.png, id=179, 361.35pt x 216.81pt>
-File: images/Gene_dispersion.png Graphic file (type png)
-
-<use images/Gene_dispersion.png>
-Package pdftex.def Info: images/Gene_dispersion.png used on input line 5.
-(pdftex.def)             Requested size: 361.34912pt x 216.80946pt.
-) [7
+[14]) [15]
+Chapter 4.
+[16
 
 
+]
+\openout2 = `sequencing.aux'.
 
- <./images/Gene_dispersion.png (PNG copy)>]
+ (./sequencing.tex
+Chapter 5.
+) [17
+
+
+]
+\openout2 = `assembly.aux'.
+
+ (./assembly.tex [18
+
+
+]
+<images/Assembly/Sol/Sol-locus.png, id=353, 984.67876pt x 520.94624pt>
+File: images/Assembly/Sol/Sol-locus.png Graphic file (type png)
+
+<use images/Assembly/Sol/Sol-locus.png>
+Package pdftex.def Info: images/Assembly/Sol/Sol-locus.png used on input line 2
+8.
+(pdftex.def)             Requested size: 440.8476pt x 180.67258pt.
+
+<images/Assembly/Sol/Sol-TSS.png, id=358, 981.6675pt x 276.03125pt>
+File: images/Assembly/Sol/Sol-TSS.png Graphic file (type png)
+
+<use images/Assembly/Sol/Sol-TSS.png>
+Package pdftex.def Info: images/Assembly/Sol/Sol-TSS.png used on input line 37.
+
+(pdftex.def)             Requested size: 440.84755pt x 108.40567pt.
+
+<images/Assembly/Sol/Sol-SolR-TSS.png, id=359, 981.6675pt x 280.04625pt>
+File: images/Assembly/Sol/Sol-SolR-TSS.png Graphic file (type png)
+
+<use images/Assembly/Sol/Sol-SolR-TSS.png>
+Package pdftex.def Info: images/Assembly/Sol/Sol-SolR-TSS.png used on input lin
+e 39.
+(pdftex.def)             Requested size: 440.84755pt x 108.40569pt.
+
+<images/Assembly/Sol/Sol-Adc-TSS.png, id=360, 982.67125pt x 255.95625pt>
+File: images/Assembly/Sol/Sol-Adc-TSS.png Graphic file (type png)
+
+<use images/Assembly/Sol/Sol-Adc-TSS.png>
+Package pdftex.def Info: images/Assembly/Sol/Sol-Adc-TSS.png used on input line
+ 41.
+(pdftex.def)             Requested size: 440.84848pt x 108.40306pt.
+
+<images/Assembly/Sol/Sol-AdhE-terminator.png, id=367, 994.71625pt x 280.04625pt
+>
+File: images/Assembly/Sol/Sol-AdhE-terminator.png Graphic file (type png)
+ <use images/Assembly/Sol/Sol-AdhE-terminator.png>
+Package pdftex.def Info: images/Assembly/Sol/Sol-AdhE-terminator.png used on in
+put line 47.
+(pdftex.def)             Requested size: 440.84872pt x 108.40569pt.
+
+<images/Assembly/Sol/Sol-bifunctional-terminator.png, id=368, 980.66376pt x 510
+.90875pt>
+File: images/Assembly/Sol/Sol-bifunctional-terminator.png Graphic file (type pn
+g)
+ <use images/Assembly/Sol/Sol-bifunctional-terminator.png>
+Package pdftex.def Info: images/Assembly/Sol/Sol-bifunctional-terminator.png us
+ed on input line 49.
+(pdftex.def)             Requested size: 440.8457pt x 180.66835pt.
+) [19]
+[20 <./images/Assembly/Sol/Sol-locus.png>] [21 <./images/Assembly/Sol/Sol-TSS.p
+ng> <./images/Assembly/Sol/Sol-SolR-TSS.png> <./images/Assembly/Sol/Sol-Adc-TSS
+.png>] [22 <./images/Assembly/Sol/Sol-AdhE-terminator.png> <./images/Assembly/S
+ol/Sol-bifunctional-terminator.png>]
+\openout2 = `Expression.aux'.
+
+ (./Expression.tex
+Chapter 6.
+) [23
+
+
+
+]
 \openout2 = `discussion.aux'.
 
-(./discussion.tex
-Chapter 3.
-) [8
+ (./discussion.tex
+Chapter 7.
+) [24
 
 
 
@@ -819,8 +961,8 @@ Chapter 3.
 \openout2 = `conclusions.aux'.
 
  (./conclusions.tex
-Chapter 4.
-) [9
+Chapter 8.
+) [25
 
 
 
@@ -834,11 +976,11 @@ Missing character: There is no î in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ≤ in font cmr12!
- [10
+ [26
 
 
 
-] [11]
+] [27]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
@@ -852,10 +994,10 @@ Missing character: There is no Ä in font cmr12!
 Missing character: There is no ê in font cmr12!
 Missing character: There is no √ in font cmr12!
 Missing character: There is no ò in font cmr12!
- [12]
+ [28]
 Missing character: There is no √ in font cmr12!
 Missing character: There is no º in font cmr12!
- [13]
+ [29]
 Missing character: There is no √ in font cmr12!
 Missing character: There is no ≠ in font cmr12!
 Missing character: There is no √ in font cmr12!
@@ -866,50 +1008,56 @@ Missing character: There is no √ in font cmr12!
 Missing character: There is no ° in font cmr12!
 Missing character: There is no √ in font cmr12!
 Missing character: There is no © in font cmr12!
- [14]
+ [30]
 Missing character: There is no √ in font cmr12!
 Missing character: There is no © in font cmr12!
 Missing character: There is no √ in font cmr12!
 Missing character: There is no ¥ in font cmr12!
- [15]
+ [31]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
-)) [16]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 77.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 77.
+)) [32]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 81.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 81.
 
-(./main.aux (./thesis-tap.aux) (./methods.aux) (./results.aux)
+(./main.aux (./thesis-tap.aux) (./introduction.aux) (./Background.aux)
+(./methods.aux) (./sequencing.aux) (./assembly.aux) (./Expression.aux)
 (./discussion.aux) (./conclusions.aux) (./bibtex.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 77.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 77.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 81.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 81.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D7D60FC8A0480E29F20A233E785FAB99;925.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 77.
+(rerunfilecheck)             Checksum: EAF286778AD9A5BA8DF3EDF17BF991AC;2527.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 81.
  ) 
 Here is how much of TeX's memory you used:
- 14909 strings out of 493315
- 294557 string characters out of 6137904
- 325906 words of memory out of 5000000
- 18023 multiletter control sequences out of 15000+600000
- 10205 words of font info for 37 fonts, out of 8000000 for 9000
+ 16101 strings out of 493315
+ 316220 string characters out of 6137904
+ 349093 words of memory out of 5000000
+ 19125 multiletter control sequences out of 15000+600000
+ 10505 words of font info for 38 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,8n,33p,2823b,1016s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,8n,55p,2823b,1018s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
-</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></
-usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr
-/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
-local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/lo
-cal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/loc
-al/texlive/2013/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (24 pages, 258820 bytes).
+</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
+usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
+r/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/l
+ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
+cal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/loca
+l/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local
+/texlive/2013/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on main.pdf (41 pages, 510632 bytes).
 PDF statistics:
- 325 PDF objects out of 1000 (max. 8388607)
- 285 compressed objects within 3 object streams
- 101 named destinations out of 1000 (max. 500000)
- 126 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 554 PDF objects out of 1000 (max. 8388607)
+ 482 compressed objects within 5 object streams
+ 149 named destinations out of 1000 (max. 500000)
+ 311 words of extra memory for PDF output out of 10000 (max. 10000000)
 

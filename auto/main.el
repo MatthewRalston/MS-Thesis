@@ -1,6 +1,8 @@
 (TeX-add-style-hook "main"
  (lambda ()
     (TeX-run-style-hooks
+     "natbib"
+     "super"
      "hyperref"
      "flexisym"
      "subscript"
@@ -11,8 +13,12 @@
      "graphicx"
      ""
      "thesis-tap"
+     "introduction"
+     "Background"
      "methods"
-     "results"
+     "sequencing"
+     "assembly"
+     "Expression"
      "discussion"
      "conclusions"
      "bibtex")))

@@ -1,14 +1,34 @@
-\contentsline {prefacesection}{List of Tables}{vi}{chapter*.4}
-\contentsline {prefacesection}{List of Figures}{vii}{chapter*.5}
-\contentsline {prefacesection}{Abstract}{viii}{chapter*.6}
-\contentsline {chapter}{\numberline {1}Methods}{1}{chapter.1}
-\contentsline {section}{\numberline {1.1}Culture}{1}{section.1.1}
-\contentsline {section}{\numberline {1.2}RNA preparation}{1}{section.1.2}
-\contentsline {section}{\numberline {1.3}RNA enrichment, RNA-seq library preparation, and Sequencing}{2}{section.1.3}
-\contentsline {section}{\numberline {1.4}Sequencing Statistics, Alignments}{4}{section.1.4}
-\contentsline {section}{\numberline {1.5}Transcriptome Assembly}{5}{section.1.5}
-\contentsline {section}{\numberline {1.6}Coverage and Differential Expression}{5}{section.1.6}
-\contentsline {section}{\numberline {1.7}Molecular Methods}{6}{section.1.7}
-\contentsline {chapter}{\numberline {2}Results}{7}{chapter.2}
-\contentsline {chapter}{\numberline {3}Discussion}{8}{chapter.3}
-\contentsline {chapter}{\numberline {4}Conclusions}{9}{chapter.4}
+\contentsline {prefacesection}{List of Tables}{vii}{chapter*.4}
+\contentsline {prefacesection}{List of Figures}{viii}{chapter*.5}
+\contentsline {prefacesection}{Abstract}{ix}{chapter*.6}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Approach}{2}{section.1.2}
+\contentsline {section}{\numberline {1.3}Document Overview}{2}{section.1.3}
+\contentsline {chapter}{\numberline {2}Background}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}History of the Involvement of Clostridium acetobutylicum in Industrial Processes}{3}{section.2.1}
+\contentsline {section}{\numberline {2.2}Bacterial Stress Response and Solvent Tolerance}{5}{section.2.2}
+\contentsline {section}{\numberline {2.3}History of Genomic and Transcriptomic Research}{8}{section.2.3}
+\contentsline {chapter}{\numberline {3}Methods}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}Culture}{9}{section.3.1}
+\contentsline {section}{\numberline {3.2}RNA preparation}{9}{section.3.2}
+\contentsline {section}{\numberline {3.3}RNA enrichment, RNA-seq library preparation, and Sequencing}{10}{section.3.3}
+\contentsline {section}{\numberline {3.4}Sequencing Statistics, Alignments}{12}{section.3.4}
+\contentsline {section}{\numberline {3.5}Coverage analysis}{13}{section.3.5}
+\contentsline {section}{\numberline {3.6}Transcriptome Assembly and Annotation}{13}{section.3.6}
+\contentsline {section}{\numberline {3.7}Digital Gene Expression, Principal Components Analysis, and Differential Expression}{14}{section.3.7}
+\contentsline {section}{\numberline {3.8}Gene Expression Clustering and Visualization}{14}{section.3.8}
+\contentsline {section}{\numberline {3.9}Web Content}{14}{section.3.9}
+\contentsline {section}{\numberline {3.10}Molecular Methods}{15}{section.3.10}
+\contentsline {chapter}{\numberline {4}Results}{16}{chapter.4}
+\contentsline {chapter}{\numberline {5}Sequencing}{17}{chapter.5}
+\contentsline {section}{\numberline {5.1}Transcriptome Assembly}{18}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Assembly Quality}{18}{subsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.1.1}Quality Statistics}{18}{subsubsection.5.1.1.1}
+\contentsline {subsubsection}{\numberline {5.1.1.2}Example Transcripts}{18}{subsubsection.5.1.1.2}
+\contentsline {subsection}{\numberline {5.1.2}Identify and Attempt to Resolve Remaining Issues}{19}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Novel Transcripts}{19}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.4}Exploratory Tools}{19}{subsection.5.1.4}
+\contentsline {chapter}{\numberline {6}Differential Expression}{23}{chapter.6}
+\contentsline {chapter}{\numberline {7}Discussion}{24}{chapter.7}
+\contentsline {chapter}{\numberline {8}Conclusions}{25}{chapter.8}

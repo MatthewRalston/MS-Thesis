@@ -14,10 +14,6 @@
 \usepackage{siunitx}
 \usepackage{subscript}
 \usepackage{flexisym}
-\usepackage{hyperref}
-\usepackage[super]{natbib}
-\usepackage{subcaption}
-%\usepackage{tikz}
 \DeclareSIUnit\Molar{\textsc{m}}
 \DeclareSIUnit\Units{\textsc{u}}
 \begin{document}
@@ -29,31 +25,27 @@
 
 %					C H A P T E R   1 - Introduction
 
-\include{introduction}    % This file (introduction.tex) contains the text
+%\include{introduction}    % This file (introduction.tex) contains the text
                    % for Chapter 1- the introduction
                    
-%					C H A P T E R    2 -  Background
-\include{Background}
-
 %					C H A P T E R   2 - Methods
 \include{methods}    % This file (methods.tex) contains the text
                    % for Chapter 2- methods
 
-%					C H A P T E R   3 & 4 - Results
-\chapter{Results}
-\include{sequencing}
-\include{assembly}    % These files contain the results sections
-\include{Expression}
+%					C H A P T E R   3 - Results
+\include{results}    % This file (results.tex) contains the text
+                   % for Chapter 3- results
 
-%					C H A P T E R   5 - Discussion
+
+%					C H A P T E R   4 - Discussion
 \include{discussion}    % This file (discussion.tex) contains the text
                    % for Chapter 4- discussion
 
-%					C H A P T E R   6 - Conclusions
+%					C H A P T E R   5 - Conclusions
 
 
 \include{conclusions}    % This file (conclusions.tex) contains the text
-                   % for Chapter 6- conclusions
+                   % for Chapter 5- conclusions
 
 
 %					R E F E R E N C E S

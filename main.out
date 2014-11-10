@@ -2,14 +2,34 @@
 \BOOKMARK [0][-]{chapter*.4}{List of Tables}{}% 2
 \BOOKMARK [0][-]{chapter*.5}{List of Figures}{}% 3
 \BOOKMARK [0][-]{chapter*.6}{Abstract}{}% 4
-\BOOKMARK [0][-]{chapter.1}{1 Methods}{}% 5
-\BOOKMARK [1][-]{section.1.1}{1.1 Culture}{chapter.1}% 6
-\BOOKMARK [1][-]{section.1.2}{1.2 RNA preparation}{chapter.1}% 7
-\BOOKMARK [1][-]{section.1.3}{1.3 RNA enrichment, RNA-seq library preparation, and Sequencing}{chapter.1}% 8
-\BOOKMARK [1][-]{section.1.4}{1.4 Sequencing Statistics, Alignments}{chapter.1}% 9
-\BOOKMARK [1][-]{section.1.5}{1.5 Transcriptome Assembly}{chapter.1}% 10
-\BOOKMARK [1][-]{section.1.6}{1.6 Coverage and Differential Expression}{chapter.1}% 11
-\BOOKMARK [1][-]{section.1.7}{1.7 Molecular Methods}{chapter.1}% 12
-\BOOKMARK [0][-]{chapter.2}{2 Results}{}% 13
-\BOOKMARK [0][-]{chapter.3}{3 Discussion}{}% 14
-\BOOKMARK [0][-]{chapter.4}{4 Conclusions}{}% 15
+\BOOKMARK [0][-]{chapter.1}{1 Introduction}{}% 5
+\BOOKMARK [1][-]{section.1.1}{1.1 Motivation}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.2}{1.2 Approach}{chapter.1}% 7
+\BOOKMARK [1][-]{section.1.3}{1.3 Document Overview}{chapter.1}% 8
+\BOOKMARK [0][-]{chapter.2}{2 Background}{}% 9
+\BOOKMARK [1][-]{section.2.1}{2.1 History of the Involvement of Clostridium acetobutylicum in Industrial Processes}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.2}{2.2 Bacterial Stress Response and Solvent Tolerance}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.3}{2.3 History of Genomic and Transcriptomic Research}{chapter.2}% 12
+\BOOKMARK [0][-]{chapter.3}{3 Methods}{}% 13
+\BOOKMARK [1][-]{section.3.1}{3.1 Culture}{chapter.3}% 14
+\BOOKMARK [1][-]{section.3.2}{3.2 RNA preparation}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.3}{3.3 RNA enrichment, RNA-seq library preparation, and Sequencing}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.4}{3.4 Sequencing Statistics, Alignments}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.5}{3.5 Coverage analysis}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.6}{3.6 Transcriptome Assembly and Annotation}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.7}{3.7 Digital Gene Expression, Principal Components Analysis, and Differential Expression}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.8}{3.8 Gene Expression Clustering and Visualization}{chapter.3}% 21
+\BOOKMARK [1][-]{section.3.9}{3.9 Web Content}{chapter.3}% 22
+\BOOKMARK [1][-]{section.3.10}{3.10 Molecular Methods}{chapter.3}% 23
+\BOOKMARK [0][-]{chapter.4}{4 Results}{}% 24
+\BOOKMARK [0][-]{chapter.5}{5 Sequencing}{}% 25
+\BOOKMARK [1][-]{section.5.1}{5.1 Transcriptome Assembly}{chapter.5}% 26
+\BOOKMARK [2][-]{subsection.5.1.1}{5.1.1 Assembly Quality}{section.5.1}% 27
+\BOOKMARK [3][-]{subsubsection.5.1.1.1}{5.1.1.1 Quality Statistics}{subsection.5.1.1}% 28
+\BOOKMARK [3][-]{subsubsection.5.1.1.2}{5.1.1.2 Example Transcripts}{subsection.5.1.1}% 29
+\BOOKMARK [2][-]{subsection.5.1.2}{5.1.2 Identify and Attempt to Resolve Remaining Issues}{section.5.1}% 30
+\BOOKMARK [2][-]{subsection.5.1.3}{5.1.3 Novel Transcripts}{section.5.1}% 31
+\BOOKMARK [2][-]{subsection.5.1.4}{5.1.4 Exploratory Tools}{section.5.1}% 32
+\BOOKMARK [0][-]{chapter.6}{6 Differential Expression}{}% 33
+\BOOKMARK [0][-]{chapter.7}{7 Discussion}{}% 34
+\BOOKMARK [0][-]{chapter.8}{8 Conclusions}{}% 35

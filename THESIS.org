@@ -1,359 +1,782 @@
 This is an organizational file for my thesis document.
 
+* Abstract
+** 1. introduction/topic
+*** Bacterial stress response
+** 2. Problem addressed, in problem form (however + summarize past research)
+*** Approaches for investigation of stress response systems include:
+**** differential expression
+**** identification of promoter motifs
+**** identification of small RNAs
+*** but assume that gene coordinates are correct
+*** OR
+*** but accept the error rates of genome annotation algorithms
+** 3. Why has no one else addressed this issue before?
+*** A central issue is the lack of deep information about the transcriptome and its structure
+*** precluding accurate estimates of gene expression and identification of novel transcripts and motifs
+** 4. What was the significant accomplishment? How was the issue addressed? in statement form
+*** Key findings:
+**** first transcriptome assembly in C. acetobutylicum, a model anaerobic gram positive
+**** novel transcripts/pathways for C. acetobutylicum
+**** promoter motifs
+*** Key methods:
+**** Assembly/annotation
+**** Expression profile clustering
+**** Promoter motif analysis
+** 5. How did you do the research??
+*** An aggregated assembly of data from a
+*** Fractional-factorial RNA-seq
+*** modernized the annotation of the C. ac genome
+*** for bioinformatic analyses
+** 6. What are the implications, who does it affect, what can be done with the results
+*** Explore the stress responsive transcriptome (levels, coordinates) on website
+*** Explore the annotation through Ensembl? (GTF)
+*** Explore the C. ac metabolism through (MATLAB metabolic tools)
 
-Notes:
-Test RACE efficiency with tobacco acid pyrophosphatase?
-Presence of 5' triphosphate suggests transcription rather than nucleolytic product
+
+
+
+
+
+
+
+
 
 
 * Introduction
-** C. ac is an ideal platform for biofuel production
-*** Feedstock flexible
-**** Exotic sugars
-**** Cellulose
-**** CO2
-*** Natural producer of butanol
-**** energy dense
-**** less hygroscopic
-**** compatible with existing infrastructure
-**** gasoline replacement
-*** Resistant to metabolic intermediates and final fuel
-** C. ac has a vibrant stress response system, some of which is poorly understood
-*** Upregulation of heat shock proteins
-*** General acid stress response
-*** Stress response sRNAs such as tmRNA, 65 RNA
-*** Sporulation program
-** Some elements of the stress response are not well understood
-*** While the sporulation cascade of C. ac is known fairly well
-*** Different classes of stress response proteins, some have no known positive regulator
-*** Many of the known regulons (Qinghua and Keerthi) are only for repressors, not transcription factors
-** Some elements of the genes/genome are not well understood
-*** CDSes were predicted by genome annotation
-*** Many have UTRs: SolB??
-*** UTRs are frequent targets of regulatory RNAs, and regulatory RNAs are known to be part
-** A detailed transcriptome annotation provides:
-*** Transcript boundaries
-*** UTRs for small RNA target identification
-*** TSSes for promoter motif identification
-*** Novel transcripts
-*** Revision of the existing annotation
-*** The ability to evaluate changes in transcription start site
+** Why are you doing this research?
+*** Connecting current status to this research
+**** Open with facts:
+***** CO2 levels are 140% of what they were in pre-industrial time
+***** The amount, temperature, and acidification of sea water has increased
+***** Glaciers, polar ice bodies have decreased in abundance
+***** CITE UN AR5 climate document
+**** "One issue that will define the contours of this century"
+**** Global warming and climbing carbon levels
+**** Renewable fuels and chemicals
+***** Use carbon as input for sustainable chemistry
+**** No economically effective system exists to convert CO2 into high quality fuels
+**** However, the failure of the US ethanol industry provides an example of the scale
+**** that bioconversions can reach.
+*** Introducing the system of interest and steps needed to make the process economical
+**** C. acetobutylicum is feedstock flexible
+**** Natural producer of butanol, a gasoline replacement being investigated by DuPont and BP
+***** Less hygroscopic, energy dense, compatible with existing infrastructure
+**** Yield can be optimized through metabolic engineering techniques
+**** Productivity can be optimized by biosystems engineering 
+***** Focus on increasing tolerance
 
-** 
+** How are you addressing this issue?
+*** I investigated the Cac stress response system using RNA-sequencing and transcriptome assembly
+*** I used a mixture of laboratory and informatic techniques to understand the stress-responsive restructuring
+*** I summarized the results in interactive visualizations and standardized annotation files
+*** so that future biosystems engineers can access the details of the transcriptome and its regulation
+*** using this info to optimize the stress tolerance of C. ac
+** What is this document and WHY is it worth reading?
+*** My thesis describes the laboratory and informatic procedures used to generate a comprehensive
+*** view of the state of a transcriptome, and how to compare the states of this transcriptome
+*** in different biological conditions.
+*** Here I describe the creation of the first reported transcriptome assembly and annotation
+*** of C. acetobutylicum, a model blahblahblah
+*** I describe novel transcripts and CDSes (possible new systems)
+*** I documented the changes that occur in the transcriptome in response to stress
+*** Found putative TFBS motifs in clusters of genes that are coexpressed
+*** Discuss hypotheses that could explain some of the behavior observed
+*** Discuss the impact of the work and how it may be used to increase biobutanol production
+* Background
+** Section: History of C. ac and biofuels
+*** Industrialization/petrochemistry leads to renewables
+*** First/second gen renewable fuels, require better process
+*** Rise of global warming science and search for alternatives
+**** Industrial revolution and success of automobile
+**** First generation biofuels
+**** Second generation biofuels
+**** Issues with feedstock
+*** History of C. ac and rise of petroleum industry
+**** Reasons for the success of the Weizmann process:
+***** Feedstock flexibility
+***** Weizmann strain had superior yields to the alternative C. acetobutylicum strains
+***** No petrochemical alternatives
+**** Improvements on the Weizmann process
+**** Decline of Weizmann process in the 50s due to the increase of the petrochemical industry
+*** Rise of C. ac as an alternative to petrochemistry
+**** Success of petrochemical industry (polymers, fuels)
+**** SO successful that CO2 levels are rising
+**** Limitations of petrochemistry (system structure, petrochemicals tooks millenia to accumulate, no input)
+**** Carbon molecules store energy pretty well in gas, liquid, or solid form.
+**** Two things are needed for a successful biofuels industry:
+***** Good feedstock:
+****** Draws from CO2
+****** High yield
+****** Low requirements on other resources (H2O, N, P)
+****** Low requirements on arable/food land
+***** Advanced fuel:
+****** Energy dense
+****** Compatible with infrastructure
+****** Safe enough...
+***** Optimal conversion process:
+****** High yield
+****** Recyclable (recycle waste/extra biomass)
+****** Modular/modifiable
+****** Low energy requirements
+**** C. ac addresses the conversion process:
+***** Feedstock flexible
+****** Cellulosic
+****** Exotic sugars
+****** Starch
+****** Molasses
+****** Glycerol?
+***** Produces an optimal/advanced biofuel
+****** Butanol
+***** Engineerable
+*** Attempts to increase productivity through metabolic engineering
+**** Other inputs:
+***** Lignocellulosic
+***** CO2
+***** Glycerol
+**** Optimizing output:
+***** Increased butanol flux/productivity
+***** Decreased byproduct output (Acetone/ethanol)
+** Section: Bacterial stress responses and solvent tolerance
+*** Challenges to prolonged exponential growth
+*** Induction of stress responses to prolong viability : e.g. stringent response
+*** In the natural environment, many stimuli can and should slow growth
+**** Lack of amino acids, mineral, or energy
+**** damaging conditions such as oxidative, osmotic, or temperature stress
+**** Accumulation of toxins
+*** General stress response
+**** Stringent response (metabolic changes)
+**** Heat-shock response:
+***** Heat-shock is semi-specific, semi-non-specific
+***** 4 classes of stress response genes
+****** HrcA Chaperones (dnaK, groESL)
+****** SigB general stress response
+****** CtsR Clp proteases
+****** Unknown
+*** Specific stress response in B. sub, C. ac
+**** Carbon catabolite represion
+***** CrcZ srna and Two-component signaling system represses CRE, derepresses lac operon, others.
+**** Population density
+***** CsrB/C, RsmY/Z
+**** Virulence
+***** RNAIII
+**** Oxidative stress
+***** OxyS sRNA
+**** Osmotic stress
+***** cyaR, rprA sRNA
+**** Envelope stress response
+***** srna (forget the name)
+**** Iron depletion
+***** downregulation of iron-sulfur cluster containing proteins by ArrF/RhyB/FsrA(B. sub)
+**** Heat stress
+***** Proteases, clp
+**** NO-stress
+***** NO sensing proteins
+**** Solvent stress response
+***** fatty acid biosynthesis, isomerization
+***** cyclopropane fattyacids (RpoS/SigB dependent)
+***** Chaperones/heat stress response
+***** Oxidative stress response (Oxy,NrdR)
+***** RND or ABC-family efflux pumps
+***** SAUCES
+Segura, Ana, et al. "Solvent tolerance in Gram-negative bacteria." Current opinion in biotechnology 23.3 (2012): 415-421.
+Comparative stress response, Sergios + Terry
+**** Gram + solvent stress
+***** Proposed: organic solvent emulsifying/deactivating enzymes
+***** solvent efflux pumps
+***** Esterases
+***** Increased capsule biosynthesis
+***** carbohydrate biosynthesis, transport
+
+**** C. AC STRESS RESPONSE
+***** Membrane structure, stabilization
+***** Flagellar assembly, synthesis: FlgE, Hag downregulation (upregulation in P. putida)
+***** SAUCE:
+Mao S, Luo Y, Bao G, Zhang Y, Li Y, Ma Y: Comparative analysis
+on the membrane proteome of Clostridium acetobutylicum
+wild-type strain and its butanol-tolerant mutant. Mol BioSyst
+2011, 7:1660-1677.
+
+
+**** small rnas?
+***** csrA and carbon storage
+**** global downregulation?
+*** Mechanisms of stress response
+**** Detection of extracellular or intracellular signals
+***** energy: cAMP
+***** DNA damage SOS response??
+***** pH, temperature? (temp riboswitch)
+***** solvent stress (unknown)
+**** Responsive regulation : two component systems, effectors, transcription factors/repressors (activation/derepression)
+***** two component systems
+***** activation and derepression
+***** small RNAs and Hfq (L.monocytogenes, b.sub strong stress responses are Hfq dependent)
+***** dense ovelapping regulons
+*** What is lacking?? What are the assumptions?
+**** Assumptions
+***** Gene models are correct / don't need further investigation
+***** Stress system models are complete 
+***** That stress response systems in poorly researched organisms will behave similarly to nearest model
+***** Assume that gene expression can be estimated accurately with the existing models
+**** Issues with assumptions
+***** Gene models for many organisms are more than a decade old (some gene models may be outdated)
+***** Reference annotation only includes proteins, not based on expression data (incomplete[sRNAs,UTRs] and automated)
+***** Regulators of class 4 stress system remain unknown (incomplete)
+***** Some regulators have no existing ortholog (incomplete), yet stress response exists and stress responsive genes exist
+***** 17% of data is accounted by existing annotation
+**** Few or poor answers
+***** How to close gaps in sytems where no ortholog is present (based on ref. annotation)
+***** How to identify changes in regulation (not just differential expression)
+***** How to identify corregulated groups in D.E. genes?
+***** How to identify reasons for corregulation (i.e. promoter/repressor motifs)
+***** How to identify small RNA regulation targets?
+
+** Section: History of genomic and transcriptome research
+*** Difficulty of understanding of systems
+*** The molecular revolution and investigation of systems
+*** The genomic revolution
+*** The rise of microarray platform with the availability of genomic info
+*** The rise of NGS
+*** The rise of 'omics and promise of integrative analyses
+** OLDSTUFF
+*** C. ac has a vibrant stress response system, some of which is poorly understood
+**** Upregulation of heat shock proteins
+**** General acid stress response
+**** Stress response sRNAs such as tmRNA, 65 RNA
+**** Sporulation program
+*** Some elements of the stress response are not well understood
+**** While the sporulation cascade of C. ac is known fairly well
+**** Different classes of stress response proteins, some have no known positive regulator
+**** Many of the known regulons (Qinghua and Keerthi) are only for repressors, not transcription factors
+*** Some elements of the genes/genome are not well understood
+**** CDSes were predicted by genome annotation
+**** Many have UTRs: SolB??
+**** UTRs are frequent targets of regulatory RNAs, and regulatory RNAs are known to be part
+*** Objectives
+**** Identify transcript boundaries
+**** Identify stress responsive genes and their groups of expression
+**** Identify promoter motifs from these groups
+**** Identify novel sRNAs (including cisRNAs)
+*** Methodology
+**** We used a 'pre' experiment to assess the depth required for the project
+***** A 'pre' experiment was conducted to evaluate the depth attainable through RNA sequencing
+***** The experiment had 5 samples over 3 time points (2 biological replicates for 2 time points)
+***** The goal of the pre-experiment was to assess the coverage over the genome and over each gene
+***** And demonstrate the ability to identify the transcription start site
+
+**** We will use RNA-sequencing to generate our data
+***** RNA-sequencing is:
+****** one of only a few methods of whole-transcriptome analysis that can identify strand-specific and boundary information
+****** Relate expression at a position to the whole transcript (useful in organisms with weak gene annotation/models)
+****** Assessible, good protocols, good software
+****** Less dependent on enzymes and RNA handling
+***** RNA-sequencing allows us to use a variety of analytical methods for our goals
+**** We will use transcriptome assembly
+***** A detailed transcriptome annotation provides:
+****** Transcript boundaries
+****** UTRs for small RNA target identification
+****** TSSes for promoter motif identification
+****** Novel transcripts
+****** The ability to evaluate changes in transcription start site
+****** A detailed model of the gene
+****** Revision of the existing annotation
+**** We will use RNA-seq to generate digital gene expression measurements
+**** We will use PCA to evaluate the data
+**** We will use statistical models to evaluate changes in expression (Diff. Exp.)
+**** We will use modern clustering techniques
+***** Clustering allows us to identify groups of genes that are coexpressed
+***** We will use ontological analyses to evaluate the clusters for common themes
+**** We will use promoter motif enrichment and prediction techniques on the clusters
+***** By clustering the genes, we identify groups of genes that presumably share something in common
+***** Grouping in this way allows us to assess these groups for motif enrichment
+**** We will evaluate sRNAs through affinity prediction and correlation
+***** Many should bind the RBS
+***** Many should be anti-correlated with their target gene
+***** trans sRNAs:
+****** May be grouped into clusters with other genes
+****** May share obvious regulatory elements with other genes in the cluster
+***** cis sRNAs:
+****** Have an obvious mechanism of action
+****** Are easy to identify
+
+*** Neat side effects of the method
+**** Updated genome annotation
 * Methods
+** Pre-experiment
+*** Samples were acquired at 3 time points, and processed into RNA-seq libraries
+*** The samples were run in identical conditions to the main experiment in the unstressed condtion
+*** The coverage was evaluated as below, PCA done as below, and differential expression as below
+** Culture conditions
+*** Time point selection
+**** Samples were selected from points along the C. ac growth curve to identify differences between
+**** the stressed and unstressed conditions in mid to late exponential growth, mid transition, and early stationary phase
+*** Bioreactor conditions
+**** ph, temp controlled
+**** defined medium to control for inconsistencies in media
+*** Stress induction?
+**** butanol and butyrate were added to the bioreactors to 60 and 40mM final concentrationss, resp.
+*** 
+** RNA processing
+*** RNA was extracted from the cells, purified, analyzed, and subject to multiple rounds of rRNA removal
+*** prior to preparation for sequencing
+*** RNA quality was controlled through repeated analysis with the bioanalyzer to maintain the quality of the RNA
+** Sequencing
+*** Sequencing was done using the Epicentre Script-Seq v2 kit and samples were multiplexed
+*** with the aid of Script-Seq primers. The samples were run across 5? lanes of a HiSeq 2500
+*** Summary info:
+**** Number of reads per library
+**** Number of reads through each processing step
+**** Percentage of usable data after rRNA removal
+** Coverage Analysis
+*** Coverage distributions
+**** per base
+**** over percentiles of the genes
+*** Calculations based on prior experiments
+**** After reviewing literature and opinions of bioinformaticians on the web,
+**** 10s to 100s of million of reads are required in total for a good assembly.
+**** The number of reads required is a function of the size of the transcriptome
+** Read processing and alignment
+*** The reads were checked for base quality and the presence of adaptors
+*** Reads were also subject to a data filtering step to remove redundant reads
+*** Next, the rRNA reads were filtered for normalization and assembly purposes
+*** The reads were then aligned to the CAC genome with bowtie2
+*** The alignment files were post-processed with SAMtools and Picard
+** Transcriptome Assembly
+*** Reference and de-novo assembly was done with Trinity, which can utilize strand specific information
+*** Cufflinks was run early on for reference. Cufflinks is optimized for Eukaryotic organisms
+*** this was apparent in the results.
+*** The assembly quality was assessed with my custom fork of the transrate software.
+*** My customized fork allows for the assessment of coverage statistics and general assembly statistics.
+** Transcriptome Annotation
+*** The resulting transcriptome assemblies were used for reannotation. ORFs were extracted using TransDecoder
+*** The reannotation included reciprocal best blast hits using NCBI Blast suite. Proteins were scanned
+*** with HMMer to identify protein domains. Hidden Markov Models of transmembrane domains and signal peptides
+*** were used to scan the proteins, additionally. The resulting annotation was processed into gtf format
+*** and compared with the reference proteome with bedtools. Left and right joins allowed the quick isolation of
+*** proteins that did not agree between the two datasets.
+*** The reference and novel proteome annotations were also compared to the gtf of the transcriptome, to identify
+*** transcripts without proteins or with only new protein annotations.
+** TSS identification
+*** TSSes were identified through the transcriptome assembly. The assembly was used as a basis for a statistical evaluation
+*** of the TSSes using TSSi. The depth of the assembly suggests that the TSSes were identified well.
+** Terminator identification
+*** Rho-independent terminators were identified in the 3' UTRs for each transcript
+** sRNA identification
+*** sRNAs were identified in a previous work with Venkataramanan et al. Additionally, novel transcripts with no predicted
+*** coding sequences were evaluated for small RNA features (terminator, promoter, homology to known RNA families in RFAM)
+** sRNA binding
+*** small RNAs were evaluated for binding to mRNAs using the RNAup program of the Vienna RNA suite.
+*** The binding sites were evaluated for the inclusion of RBSes. Additionally, the small RNAs were
+*** correlated with their target gene to detect anti-correlation.
+** Expression and PCA
+*** Expression was calculated using HTSeq. Raw read counts were normalized and used for Principal Components Analysis
+*** Data were normalized with a size factor that is the median of the ratio of a features read counts in sample i
+*** to the geometric mean of the features read counts across all samples
+*** Scree plots were produced in R and the data were visualized with rgl according to the Principal Components
+** Differential expression
+*** The theory behind DESeq is in experiments with low sample size (n), abnormally low observed variances are an artifact of the sample size
+*** DESeq's solution is to fit a model of dispersion as a function of mean expression. This model is used to adjust
+*** the variance and the read counts during the regularization process, such that abnormally low variance is penalized (reducing type 1 error)
+*** and only genes which fail an outlier test will have their variance reduced.
+*** DESeq2 then uses these regularized data for model fitting and hypothesis testing. The results of the hypothesis testing
+*** were visualized in R and on the web in a customized visualization tool that will be described later. Resuls were also
+*** incorporated into a circos graph for visualization and interaction using a tool developed, also described later
+** Clustering
+*** The regularized data were used for clustering. Gene expression profiles (of regularized read counts) were normalized
+*** and then used for clustering. Correlation matrices using the kendall, spearman, and pearson correlation metrics were
+*** constructed for the data. These matrices were used with the regular profiles and the normalized profiles as input
+*** to a customized implementation of the OPTICS clustering algorithm. The algorithm uses a density approach to organize
+*** the genes into clusters. A hierarchical clustering approach is used to extract the clusters from the reachability plot.
+*** My implementation then reports three clustering metrics: the silhouette, the davies boudin index, and the dunn index.
+*** I then used multivariate multiple linear regression, MANOVA, and Kruskal-Walis in R to evaluate the significance of the parameters
+*** I used the information from this regression to optimize these metrics and produce the best clustering possible
+** Ontology
+*** The results from the clustering analysis were used to feed an ontological analysis. 
+** Promoter motifs
+** Web visualizations
+* Aim 1: Sequence and Assemble the Transcriptome
+** Pre-experiment
+*** Subaim 1: Assess the prevalence of rRNA contamination and adjust
+**** Betweek 60-80% of the RNA seemed to be ribosomal.
+**** The remaining depth was ~10M clusters per library
+**** This depth is comparable and superior to other studies (citations?)
+**** who do not explicitly state the amount of ribosomal contamination
+*** Subaim 2: Assess the required coverage of the transcriptome assembly
+**** The average coverage seemed to be substantial, and TSSes could readily be seen
+**** The depth for highly expressed transcripts was very large, and coverage near the 5' end
+**** suggests that a high quality assembly was possible
+** Full experiment
+*** Subaim 3: Sequence 30 samples, focusing on stress and time
+**** The investigated time points and stress levels have background literature
+**** to corroborate the results.
+**** ALIGNMENT STATS
+*** Subaim 4: Assemble the transcriptome
+**** Of the X sequenced reads, only Y reads are accounted for by the coding sequences
+**** Granted, some percentage of the total reads are attributable to the antisense rate inherent in the
+**** The transcriptome was assembled, producing
+**** x transcripts
+**** y of which contained z coding sequences
+**** Thus the case for the transcriptome assembly
 
-* Results- Sequencing
-** Why use RNA-sequencing?
-*** Few methods exist for whole transcriptome analysis
-**** Even fewer can identify strand-specific and boundary information.
-**** RNA sequencing connects the whole transcript to its observable boundaries
-*** High-depth RNA sequencing is accessible and has well established protocols
-**** While RNA sequencing data analysis is non-trivial, much free software and support
-**** exists in the community. Moreover, the laboratory protocols for library generation
-**** receive lots of attention in the literature.
-*** Alternatives to RNA-sequencing (citations) rely on enzymatic steps and RNA manipulation
-**** Alternatives frequently involve particular chemistries and also require sequencing
-**** Alternatives provide single-dimensional date (e.g. TSS only)
-*** RNA-sequencing is the method of choice for many transcriptome annotation projects
-** How do we use RNA-seq and evaluate the quality of data it produces?
-*** Chief experimental objective: transcriptome coordinates & comparison with previous
-**** Experimental conditions of interest: butanol and butyrate stress
-**** Observe transcriptome dynamics: multiple time points
-**** Overall assembly and assessment: assemble, annotate, mark differences
-*** Evaluated the coverage/depth with a 'pre' experiment
+**** These transcripts accounted for Y% of the total assembled megabases.
+**** BASIC stats (number of transcripts, gc content, L50?? (whatever that's called)
+**** INCLUDE SINGLETON STATS!!!
+**** State the fact that for each of the Y transcripts, at least one transcription start site
+**** can be seen in the data.
+
+
+* Aim 2: Interpret the quality of the assembly
+** Sub-aim 1: Assembly Quality
+*** Basic quality, stats
+**** Number of reads aligned to the transcriptome vs CDSes only
+**** All transcripts re-aligned to genome with near perfect accuracy
+**** Most of the known coding sequences were accounted for by the assembly
+**** Transcript lengths are reasonable
+*** Positive operon/transcript examples
+**** Sol + ADC (tss from Durre??), explain no transcription near stop site
+
+
+
+**** BdhA, B
+**** GroESL + antisense RNA???
+
+**** Spo0A (check if literature suggests a long UTR
+**** look for CAC2079!!! (missing protein with extremely high expression)
+**** HrcA + others, revisit transcript sizes
+*** Accuracy of transcription start sites
+*** Basal rate of antisense transcription
+**** ~ 1$ from Nat. Comparative study
+**** Use spp0A and HrcA as control cases
+** Sub-aim 2: Identify and attempt to resolve outstanding issues in the assembly
+*** Outstanding issues
+**** UTR length seems long, evidence for fused transcripts
+**** many novel transcripts from outstanding antisense signal.
+** Sub-aim 3: Identify novel transcripts and ensure their quality
+*** Case studies. Find one.
+
+** Sub-aim 4: Develop tool and demonstrate its use in exploration and curation
+*** Given the non-normal distribution of coverage and background signals present in
+*** NGS data, There are no one-size fits all solutions to address the challenges in assembly
+*** There are novel transcripts that may be difficult to fully investigate or verify without further inquiry
+*** There are undiscovered RNA interaction regions, regulatory motifs, and undiscovered or low abundance transcripts
+*** That are expressed at other time points.
+*** This tool will facilitate future research in this area
+** Sub-aim 5: Reannotate the transcriptome
+* Sequencing
+** Results- pre-experiment??
+*** Why did we use a pre-experiment to evaluate the RNA seq requirements?
+*** How did we do this pre-experiment
+*** What were the results of this pre-experiment?
 **** Identified transcription start sites through assembly.
 **** Confirmed experimental conditions through PCA
 **** Identified differentially expressed genes
-*** Used a fractional factorial experimental design to explore the behavior in stress and time
-**** I executed the design, extracted the RNA, prepared the libraries, submitted for sequencing
-**** When the data was received I preprocessed and mapped the reads, processed and extracted
-**** expression measurements from the alignments, processed and visualized the results.
-*** At each point during the pre-experiment and the full experiment, I assessed RNA integrity
-**** No blurred bands were seen in the eletropherograms
-**** the electropherograms were similar to the results of vendors.
-*** I assessed the quality of the reads that were used for all downstream analyses, controling for base quality
-**** Setting the per-base error rate to %1 facilitates the clean assembly of all pairs of reads.
-** What were the results of the sequencing? Do the data look good?
-*** ~800M pairs of reads were produced from RNA sequencing.
-*** In the pre-experiment, ~33% of the data was usable for assembly, expression, etc.
-*** In the full experiment, 40-51% of the data was usable (the rest was ribosomal)
-*** Of this, nearly 100% of the reads aligned to the genome.
-*** These number indicate a successful sequencing effort.
-* Results- Coverage Analysis
-** Why do we analyze the coverage from the sequencing?
-*** We assess the coverage to benchmark our ability to achieve high depth in the presence of contaminating rRNA,
-*** to assess our degree of multiplexing to achieve the requisite coverage of the experimental factors (4 times, 3 stresses)
-*** with some degree of replication as well. Assessing the coverage from a small 'mini' experiment was critical for
-*** evaluating the current sequencing approach. Past experiments suffered from both RNA instability and rRNA contamination
-*** which results in low coverage overall, especially at the 5' and 3' ends of the transcripts, so it was important
-*** to address the trend of coverage across the length of each gene.
-** How do we address and assess the coverage?
-*** Pre-experiment:
-**** The assembly requires significant coverage (> 10x)
-**** To design a successful experiment, a pre-experiment was conducted
-**** to understand the amount of ribosomal contamination (effecting usable data amount)
-**** and the coverage required to identify transcript boundaries.
-**** Similar studies were used for comparison, and had similar levels of depth (before or after rRNA filtering)
-**** The presence of deep coverage in highly expressed transcripts
-**** combined with an average coverage of 10x per sample
-**** suggests that sufficient coverage was received (in total) to produce a high quality assembly
-**** It is worth noting that the conservative Diff. Exp. model that I use
-**** emphasizes highly-expressed genes. The stress responsive genes identified
-**** will consequently have high expression and an excellent likelihood of
-**** transcription boundary detection.
-*** Metrics
-**** Average coverage
-**** Minimum/maximum coverage
-**** Total coverage (over all samples)
-**** Coverage trends along the length of all genes/CDSes
-*** One of the obstacles for this project was achieving the requisite depth. Our solution was to use
-*** enrichment techniques to increase the proportion of RNA coming from interesting coding regions.
-*** Additionally, we multiplexed in a way to get close to ~25M clusters per sample (2x75). This allowed us to be
-*** tolerant of ribosomal sequences contaminating our data, even after enrichment. I assessed the coverage achieved
-*** by performing a ribosomal RNA filtering step to eliminate the rRNA, and comparing the data amounst before and after
-*** to produce a contamination percentage. I then was able to create profiles of coverage across the length of the genome
-*** and across the length of each gene. By normalizing with respect to gene length, the coverage trends of each gene
-*** could be summarized with boxplots, understanding the distribution of coverage at each percentile of gene length.
-** What were the findings from the coverage analyses?
-*** In the pre-experiment we found coverage of ~10x per base
-*** There is no de-facto 'requirement' for coverage in the literature
-*** Rather, I made inferences about coverage requirements from successful studies
-*** Unfortunately, there exist only a handful of studies that feature TSS identification
-*** The vast majority of these do not go so far as to provide a full transcriptome assembly.
-*** However, successful cases in both human and bacteria use on the order of 10s of millions
-*** of clusters per sample. Many of these groups have sequenced at least 100s of megabases.
-*** Depending on the size of the transcriptome, this can result in coverage
-*** of between 10-100x. Our results showed on average a coverage of 10x per sample.
-*** With 30 samples in our final experiment, this sums to a 300x coverage of our transcriptome.
-* Results- Assembly
-** Why use transcriptome assembly?
-*** Motivation
-**** 1. No existing assembly, and desire for coordinates
-**** 2. Proteome is based on genome annotation as opposed to transcriptome annotation, less accurate
-**** 3. The current state of knowledge about the transcriptome is the product of automated annotation, functional inferences,
-**** older gene-specific studies (e.g. RACE-PCR), and modern sequencing techniques. For many non-model organisms,
-**** gene assignments are based almost entirely on bioinformatic techniques. For this reason, high-throughput sequencing techniques
-**** are desirable. High-depth sequencing with NGS technology has produced rapid increases in the amount of sequenced genomes
-**** and characterized transcripts. Transcriptome assembly is a technique that leverages the depth of shotgun sequencing to identify
-**** transcript boundaries and novel or low-abundance transcripts. Transcriptome asembly is framed as a problem with a graph theoretic
-**** solution. Similar to genome assembly, the objective is to join growing contigs through overlap and sequence identity. Contig boundaries
-**** are dictated by the depth of coverag at the ends of transcripts. Only high-depth coverage produces the number of reads required
-**** to estimate these boundaries, and typically > 10x coverage is required for a single point snapshot of the transcriptome.
-**** 4. No information about how the proteome/transcriptome changes coordinates with stress and time
-** How do we use transcriptome assembly and evaluate its quality?
-*** Assembly: Trinity
-**** Trinity is a de-Bruijn graph assembler that can incorporate strand-specific reads.
-*** Assessment: Transrate and assembly annotation
-**** 1. Transcriptome assembly has inherited some metrics from genome assembly (N50, etc.) and has acquired some newer metrics from
-**** bioinformatics. Traditional metrics include the number of transcripts, min, max, and avg transcript size, N50 (transcript size in which
-**** 50% of all assembled bases is from larger transcripts), number of singleton reads, and others.
-**** I have produced a forked version of 'transrate' that reports singleton reads, realignment statistics, and other statistics.
-**** Additional metrics include ORF number, reciprocal best blast hits, ____, and others.
-**** 2. Many of the modern techniques are based on the agreement between the assembled transcriptome and a reference proteom (an automated annotation, for example)
-**** These techniques will be discussed in the reannotation section.
-** What are the findings from the assembly assessment?
-*** New transcripts?
-*** New antisense transcripts / cisRNA candidates?
-**** Are they anticorrelated with the other gene?
-* Results- Reannotation
-** Why use transcriptome annotation?
-*** The current proteome annotation simply consists of predicted CDSes based on annotation of the CAC genome, and not the transcriptome.
-*** Agreement with an older assembly may be a positive indicator in some circumstances and a negative indicator in others.
-*** For example, if a new assembly produces a number of previously unannotated transcripts,
-*** this is most likely a reflection of the limitation of older automated pipelines, than a problem with the new assembly. Similarly, if the new assembly's
-*** annotation fails to produce some of the annotated proteins, this may not necessarily be a problem: these could be false positives from the
-*** previous annotation.
-** How do we use reannotation and evaluate it's quality?
-*** Reannotation was done with TransDecoder and Trinnotate [see website]
-*** After transcriptome assembly, the assembly was assessed with my customized fork of the transrate program
-**** Indicators of quality assembly:
-***** Number of assembled transcripts
-***** Distribution of transcript length
-***** Reasonable max length
-***** Agreement with previous proteome
-***** good GC content
-***** All transcripts align back to genome.
-*** After transcriptome assembly, generate proteome annotation and compare with ref. proteome: BEDTOOLS
-**** Merge assembly gtf with ref. proteome gtf:
-***** Number of transcripts with protein [full/partial]
-***** Number of proteins with transcript [full/partial]
-***** Number of transcripts without protein
-***** Number of proteins without transcript
-**** Annotate and evaluate new proteome
-***** As above
-**** Compare reference and new proteome gtf/bed files with BEDtools/BEDops!!
-***** Number of operons
-****** Distribution of number of proteins per operon
-***** # Old proteins with no transcript and their functions
-***** # New proteins and their functions
-***** 5' and 3' UTR size distribution
+** Results- Sequencing
+*** Why use RNA-sequencing?
+**** Few methods exist for whole transcriptome analysis
+***** Even fewer can identify strand-specific and boundary information.
+***** RNA sequencing connects the whole transcript to its observable boundaries
+**** High-depth RNA sequencing is accessible and has well established protocols
+***** While RNA sequencing data analysis is non-trivial, much free software and support
+***** exists in the community. Moreover, the laboratory protocols for library generation
+***** receive lots of attention in the literature.
+**** Alternatives to RNA-sequencing (citations) rely on enzymatic steps and RNA manipulation
+***** Alternatives frequently involve particular chemistries and also require sequencing
+***** Alternatives provide single-dimensional data (e.g. TSS only)
+**** RNA-sequencing is the method of choice for many transcriptome annotation projects
+*** How do we use RNA-seq and evaluate the quality of data it produces?
+**** Chief experimental objective: transcriptome coordinates & comparison with reference proteome
+***** Experimental conditions of interest: butanol and butyrate stress
+***** Observe transcriptome dynamics: multiple time points
+***** Overall assembly and assessment: assemble, annotate, mark differences
+**** Used a fractional factorial experimental design to explore the behavior in stress and time
+***** I executed the design, extracted the RNA, prepared the libraries, submitted for sequencing
+***** When the data was received I preprocessed and mapped the reads, processed and extracted
+***** expression measurements from the alignments, processed and visualized the results.
+*** What were the results of the sequencing? Do the data look good?
+**** ~800M pairs of reads were produced from RNA sequencing.
+**** In the pre-experiment, ~33% of the data was usable for assembly, expression, etc.
+**** In the full experiment, 40-51% of the data was usable (the rest was ribosomal)
+**** Of this, nearly 100% of the reads aligned to the genome.
+**** These number indicate a successful sequencing effort.
+** Results- Coverage Analysis
+*** Why do we analyze the coverage from the sequencing?
+**** We assess the coverage to benchmark our ability to achieve high depth in the presence of contaminating rRNA,
+**** to assess our degree of multiplexing to achieve the requisite coverage of the experimental factors (4 times, 3 stresses)
+**** with some degree of replication as well. Assessing the coverage from a small 'mini' experiment was critical for
+**** evaluating the current sequencing approach. Past experiments suffered from both RNA instability and rRNA contamination
+**** which results in low coverage overall, especially at the 5' and 3' ends of the transcripts, so it was important
+**** to address the trend of coverage across the length of each gene.
+*** How do we address and assess the coverage?
+**** Pre-experiment:
+***** The assembly requires significant coverage (> 10x)
+***** To design a successful experiment, a pre-experiment was conducted
+***** to understand the amount of ribosomal contamination (effecting usable data amount)
+***** and the coverage required to identify transcript boundaries.
+***** Similar studies were used for comparison, and had similar levels of depth (before or after rRNA filtering)
+***** The presence of deep coverage in highly expressed transcripts
+***** combined with an average coverage of 10x per sample
+***** suggests that sufficient coverage was received (in total) to produce a high quality assembly
+***** It is worth noting that the conservative Diff. Exp. model that I use
+***** emphasizes highly-expressed genes. The stress responsive genes identified
+***** will consequently have high expression and an excellent likelihood of
+***** transcription boundary detection.
+**** Metrics
+***** Average coverage
+***** Minimum/maximum coverage
+***** Total coverage (over all samples)
+***** Coverage trends along the length of all genes/CDSes
+**** One of the obstacles for this project was achieving the requisite depth. Our solution was to use
+**** enrichment techniques to increase the proportion of RNA coming from interesting coding regions.
+**** Additionally, we multiplexed in a way to get close to ~25M clusters per sample (2x75). This allowed us to be
+**** tolerant of ribosomal sequences contaminating our data, even after enrichment. I assessed the coverage achieved
+**** by performing a ribosomal RNA filtering step to eliminate the rRNA, and comparing the data amounst before and after
+**** to produce a contamination percentage. I then was able to create profiles of coverage across the length of the genome
+**** and across the length of each gene. By normalizing with respect to gene length, the coverage trends of each gene
+**** could be summarized with boxplots, understanding the distribution of coverage at each percentile of gene length.
+*** What were the findings from the coverage analyses?
+**** In the pre-experiment we found coverage of ~10x per base
+**** There is no de-facto 'requirement' for coverage in the literature
+**** Rather, I made inferences about coverage requirements from successful studies
+**** Unfortunately, there exist only a handful of studies that feature TSS identification
+**** The vast majority of these do not go so far as to provide a full transcriptome assembly.
+**** However, successful cases in both human and bacteria use on the order of 10s of millions
+**** of clusters per sample. Many of these groups have sequenced at least 100s of megabases.
+**** Depending on the size of the transcriptome, this can result in coverage
+**** of between 10-100x. Our results showed on average a coverage of 10x per sample.
+**** With 30 samples in our final experiment, this sums to a 300x coverage of our transcriptome.
+* Assembly
+** Results- Assembly
+*** Why use transcriptome assembly?
+**** Motivation
+***** 1. No existing assembly, and desire for coordinates
+***** 2. Proteome is based on genome annotation as opposed to transcriptome annotation, less accurate
+***** 3. The current state of knowledge about the transcriptome is the product of automated annotation, functional inferences,
+***** older gene-specific studies (e.g. RACE-PCR), and modern sequencing techniques. For many non-model organisms,
+***** gene assignments are based almost entirely on bioinformatic techniques. For this reason, high-throughput sequencing techniques
+***** are desirable. High-depth sequencing with NGS technology has produced rapid increases in the amount of sequenced genomes
+***** and characterized transcripts. Transcriptome assembly is a technique that leverages the depth of shotgun sequencing to identify
+***** transcript boundaries and novel or low-abundance transcripts. Transcriptome asembly is framed as a problem with a graph theoretic
+***** solution. Similar to genome assembly, the objective is to join growing contigs through overlap and sequence identity. Contig boundaries
+***** are dictated by the depth of coverag at the ends of transcripts. Only high-depth coverage produces the number of reads required
+***** to estimate these boundaries, and typically > 10x coverage is required for a single point snapshot of the transcriptome.
+***** 4. No information about how the proteome/transcriptome changes coordinates with stress and time
+*** How do we use transcriptome assembly and evaluate its quality?
+**** Assembly: Trinity
+***** Trinity is a de-Bruijn graph assembler that can incorporate strand-specific reads.
+**** Assessment: Transrate and assembly annotation
+***** 1. Transcriptome assembly has inherited some metrics from genome assembly (N50, etc.) and has acquired some newer metrics from
+***** bioinformatics. Traditional metrics include the number of transcripts, min, max, and avg transcript size, N50 (transcript size in which
+***** 50% of all assembled bases is from larger transcripts), number of singleton reads, and others.
+***** I have produced a forked version of 'transrate' that reports singleton reads, realignment statistics, and other statistics.
+***** Additional metrics include ORF number, reciprocal best blast hits, ____, and others.
+***** 2. Many of the modern techniques are based on the agreement between the assembled transcriptome and a reference proteom (an automated annotation, for example)
+***** These techniques will be discussed in the reannotation section.
+*** What are the findings from the assembly assessment?
+**** New transcripts?
+**** New antisense transcripts / cisRNA candidates?
+***** Are they anticorrelated with the other gene?
+** Results- Transcription start sites
+*** Why do we look for transcription start sites?
+*** How do we identify transcription start sites?
+*** What are the results?
+** Results- Reannotation
+*** Why use transcriptome annotation?
+**** The current proteome annotation simply consists of predicted CDSes based on annotation of the CAC genome, and not the transcriptome.
+**** Agreement with an older assembly may be a positive indicator in some circumstances and a negative indicator in others.
+**** For example, if a new assembly produces a number of previously unannotated transcripts,
+**** this is most likely a reflection of the limitation of older automated pipelines, than a problem with the new assembly. Similarly, if the new assembly's
+**** annotation fails to produce some of the annotated proteins, this may not necessarily be a problem: these could be false positives from the
+**** previous annotation.
+*** How do we use reannotation and evaluate it's quality?
+**** Reannotation was done with TransDecoder and Trinnotate [see website]
+**** After transcriptome assembly, the assembly was assessed with my customized fork of the transrate program
+***** Indicators of quality assembly:
+****** Number of assembled transcripts
+****** Distribution of transcript length
+****** Reasonable max length
+****** Agreement with previous proteome
+****** good GC content
+****** All transcripts align back to genome.
+**** After transcriptome assembly, generate proteome annotation and compare with ref. proteome: BEDTOOLS
+***** Merge assembly gtf with ref. proteome gtf:
+****** Number of transcripts with protein [full/partial]
+****** Number of proteins with transcript [full/partial]
+****** Number of transcripts without protein
+****** Number of proteins without transcript
+***** Annotate and evaluate new proteome
+****** As above
+***** Compare reference and new proteome gtf/bed files with BEDtools/BEDops!!
+****** Number of operons
+******* Distribution of number of proteins per operon
+****** # Old proteins with no transcript and their functions
+****** # New proteins and their functions
+****** 5' and 3' UTR size distribution
 
-*** Comparative genomics analysis of final proteome
-**** A comparative analysis can be done, comparing the C. ac proteome in a pairwise manner to other known proteomes
-**** A taxonomic analysis of reciprocal best blast hits can be performed to show the taxonomic relationships of the new annotation
-**** to the reciprocal best-blast protein hits, and the RBB hits with experimental evidence.
-*** COG grouping
-** What are the findings from the reannotation?
-* Results- Transcription start sites
-** Why do we look for transcription start sites?
-** How do we identify transcription start sites?
-** What are the results?
-* Results- Expression and PCA
-** Why do we use principal components analysis to analyze our gene expression data?
-*** PCA is used to see underlying patterns in a dataset.
-*** PCA tells us:
-**** If samples are related / if there is underlying relationships that suggest that certain groups of samples are more similar
-**** than you would expect
-**** If our data are worth analyzing
-*** To provide a summary of the data
-*** The objective of principal components analysis is to provide dimensionality reduction
-**** With dimensionality reduction, we can observe clusters of related samples in the lower
-**** space. Observing clusters of related samples allows us to verify that the underlying
-**** structure in the data represents the experimental design
-** How do we use this technique in practice?
-*** Reads are countes with HTSeq by summing the number of reads in each location of a gtf.
-*** PCA is performed in R
-*** Visualization is done with rgl and an interactive website for the first 4 principal components
-** What are the results from the PCA?
-*** I demonstrated great separation and clustering of the sample conditions through PCA
-*** This suggests an underlying structure/correlation in the samples that matches the metadata (sample condition)
-*** i.e. there is underlying evidence of experimental factors that group samples together by condition
-*** and importantly, this is apparent at all time points
-*** Four PCs are sufficient to demonstrate this spatial clustering
-* Results- Differential Expression
-** Why look at differential expression (and other analyses: PCA, etc) [INTRODUCTION]
-*** What is differential expression analysis?
-**** Differential expression describes the response of a biological system to stimulation
-**** When stimulated, gene expression levels change, providing insight into the
-**** organization of the molecular system, hidden behind the dynamics of the change.
-**** For example, a gene whose response peaks at an early time
-**** may be a transcription factor for a gene whose response peaks afterwards.
-*** What were our experimental conditions of interest?
-**** In this experiment, I perturbed these systems by increasing the concentration
-**** of small molecule metabolites to stressful levels, and sampling at various time points
-*** Why did I investigate these factors?
-**** On the simplest level, a differential expression analysis allows us to identify genes
-**** that respond to stress. On a deeper level, this analysis allows us to identify putative
-**** transcripts that are also stress responsive. (if the transcripts were merely artifacts
-**** of library preparation and not true findings, we would expect their levels to be
-**** uniformly distributed and independent of stress). 
-**** Secondly, the factor of time allows us to identify the trend of a gene's response over time
-**** dividing the stress responsive genes into categories/clusters. Novel genes found through assembly
-**** may be regulated by similar mechanisms to the genes in their cluster. Their role in the stress response
-**** perhaps as positive or negative regulators of the stress response regulators may be inferred from their
-**** trend of the gene over time.
-**** Thirdly, clustering of these genes allows us to identify motifs upstream of the gene in a similar cluster. A tight clustering
-**** is indicative of similar regulation, adding directed edges to the current understanding of
-**** the stress response network.
-**** SUMMARY: I hypothesize that there are novel stress response regulators that have similar
-**** expression profiles to known stress responsive genes.
-**** By using gene expression clustering, I hope to identify the response regulators of each
-**** cluster and novel gene.
-** How do we evaluate patterns of differential expression [METHODS/RESULTS]
-*** What is principal components analysis and what methods are used?
-**** Principal components analysis is a fundamental part of the analysis of large
-**** datasets. The dataset takes the shape of a NxM expression matrix with large N (> 1000), the number of genes.
-**** Datasets of such size are difficult to explore graphically, especially if M is also relatively large.
-**** In the case of differential expression analysis, the number of conditions is a function of the number of experimental
-**** factors. For this reason, PCA, is a central part of 'factor analysis.' The objective of PCA is to reduce the dimensionality
-**** of the dataset to ideally a MxM dataset, since M << N. Such a dataset describes the behavior of each condition. The reduced
-**** dataset consists of a condition's coordinates in terms of the dataset's principal components. By focusing on a few principal
-**** components at a time, this allows us to visualize each of the M conditions in 2 or 3 dimensions at a time. Combining this visualization
-**** with the condition metadata allows us to view spatial patterns in the locations of the conditions in space. Ideally, conditions
-**** that share a similar factor (e.g. stress or time) would have similar localization in the space spanned by the principal components.
-**** Practically, this is done by using computer-aided singular value decomposition to produce a matrix of the conditions
-**** in terms of the principal components. By simply visualizing the rows/conditions, selecting 2 or 3 components at a time we can identify
-**** clustering of the conditions by the factors.
-*** What is differential expression analysis and what methods are used?
-**** Differential expression analysis is usually performed on a NxM count matrix
-**** for N genes and M samples. First, the data must be normalized by library size
-**** (not to be confused with statistical normalization, where mean equals 0 etc.)
-**** Next, there is an optional regularization step, which uses a model to fit variance estimates
-**** and adjust the data (increasing or decreasing the variance for some genes.)
-**** Finally, a statistical hypothesis test is used, with the null hypothesis of
-**** no differential expression between the two conditions.
-**** The results from such analysis include p-values and log fold changes of the comparison
-**** for each of N genes, normalized/regularized expression values and variance estimates
-**** These results can be visualized by a number of packaged visualizations, can be customized to some degree
-**** with a programming language such as python's matplotlib or R's integrated/lattice/ggplot systems.
-**** However, with the size of the data and the number of comparisons, interactive visualizations are most useful.
-*** What is cluster analysis and what methods are used?
-**** Cluster analysis is the use of unsupervized machine learning techniques to partition the data
-**** specifically, the genes, into groups by related behaviors. Typical examples of clustering techniques include
-**** Hierarchical clustering and k-means. These algorithms partition the data according to a distance metric, relying
-**** on the nature of the data to provide separation and membership.
-**** Several cluster methods, distance methods, and algorithms are available to cluster data. Hierarchical clustering
-**** is useful and very well reflects the structure of the data, prone to identifying singleton clusters.
-**** Iterative k-means/medioids methods are useful and elegant, but rely on the knowledge of the correct number of clusters
-**** 'k' ahead of time. A newer algorithm known as dbscan can produce high quality results, but is sensitive to a
-**** distance parameter epsilon. A newer version of this algorithm known as optics requires only a minimum number of objects/genes
-**** per cluster.
-**** Clustering methods are most meaningful when using a subset of the initial dataset (e.g. differentially expressed only)
-**** and perhaps after removing singleton clusters through hierarchical analysis.
-**** Clustering results can be visualized as dendrograms, on a 2D PC plot, or through variations on a circular plot.
-**** Clustering results may be evaluated in a few ways, where A is clustering accuracy:
-**** First, what is the agreement between points within a cluster? As A approaches 100%, this agreement metric (inverse of distance) should increase
-**** Second, what is the agreement between points outside of a cluster? As A approaches 100%, this agrement metric should decrease.
-**** In summary, the metrics of intra and inter-cluster similarity describe the efficiency of clustering.
-**** An excellent cluster could also serve as the basis for a machine learning classifier.
-*** What is gene ontology analysis and how is it used?
-**** Gene ontologies are controlled vocabularies that describe biological processes, molecular functions, and cellular compartments
-**** of protein products. These vocabularies are useful in understanding the role of a set of genes en masse: e.g. after a cluster
-**** analysis. Gene ontologies are maintained through the GO consortium and are accessible through several tools. While many tools
-**** exist for such analyses, many are optimized for model organisms and are not available for lesser organism. This is likely due
-**** to the complex networked hierarchy of GO terminologies. While the databases themselves are not incredibly massive, it is rare to
-**** find a resource which has the terminologies linked to the gene identifiers of non-model organisms. Therefore, I will be using
-**** the resource known as 'DAVID' to provide GO annotations. In practice, a list of gene names is supplied to the DAVID web portal.
-**** The criterion for selection of the genes of this list (e.g. differential expression, cluster membership, etc.) I denote as C.
-**** The list is then analyzed for enrichment of categories of GO terms using a hypergeometric test. Finally, the independence
-**** of the GO category and the criterion C is assessed with Fisher's exact test.
-** What do we observe from the patterns of differential expression?
-*** X genes in total were differentially expressed across the conditions
-*** The statistical criterion (model, p and log fold change thresholds) are
-**** p value of < 0.05 and LFC of > 2
-*** Y genes were upregulated at some point
-*** Z genes were downregulated at some point
-*** Time series analysis
-**** What genes are differentially expressed in the normal condition only at later time points?
-**** Are these same genes and processes enriched in the normal condition at later time points?
-**** We can analyze this by comparing a later time point to an earlier time point (t vs t-1)
-**** or by comparing a later time point to the first time point(tx vs t1)
-*** cis-RNA
-**** Differential expression for cis rnas was obtained by:
-***** Performing assembly
-***** Creating a gtf file of the novel cis rna transcripts
-***** Acquiring read counts and performing differential expression
-**** We observe that....
-* Results- Expression clustering and Gene Ontology
-** Why do we use gene expression clustering and ontological analysis?
-** How do we use expression clustering and ontological analysis?
-** What were the results of clustering and ontological analysis?
-*** GO enrichment
-**** In butanol stress, ______ processes were upregulated
-**** In butyrate stress, _____ processes were upregulated
-**** Under both conditions, _______ processes were upregulated
-**** In butanol stress, _____ processes were downregulated
-**** In butyrate stress, ______ processes were downregulated
-**** Under both conditions, ______ processes were downregulated.
-**** The most commonly enriched processes were ______, _______, and _______
-* Results- Promoter motif identification
-** Why do we use promoter prediction?
-*** Identify stress responsive motifs
-*** Use in genetic engineering
-** How do we use this technique?
-*** Relationship with CLUSTERING
-*** Enrichment analysis with RSAT
-*** De-novo prediction with B. sub motifs and Sean Jones' microarray motifs
-** What are the results?
-* Results- sRNA binding
-** Why do we predict sRNA-RNA interactions
-*** Looking for stress responsive sRNA regulators
-*** Looking for novel sRNAs and regulatory interactions
-*** Identify sRNAs that can be overexpressed to increase the productivity
-** How do we predict these interactions
-*** Anticorrelation of sRNA and target?
-*** Binding affinity of the sRNAs to the target
-** What are the results of the predictions?
+**** Comparative genomics analysis of final proteome
+***** A comparative analysis can be done, comparing the C. ac proteome in a pairwise manner to other known proteomes
+***** A taxonomic analysis of reciprocal best blast hits can be performed to show the taxonomic relationships of the new annotation
+***** to the reciprocal best-blast protein hits, and the RBB hits with experimental evidence.
+**** COG grouping
+*** What are the findings from the reannotation?
+* Use assembly to guide D.E., transcript identification, system organization
+** Results- sRNA binding
+*** Why do we predict sRNA-RNA interactions
+**** Looking for stress responsive sRNA regulators
+**** Looking for novel sRNAs and regulatory interactions
+**** Identify sRNAs that can be overexpressed to increase the productivity
+*** How do we predict these interactions
+**** Anticorrelation of sRNA and target?
+**** Binding affinity of the sRNAs to the target
+*** What are the results of the predictions?
+** Results- Expression and PCA
+*** Why do we use principal components analysis to analyze our gene expression data?
+**** PCA is used to see underlying patterns in a dataset.
+**** PCA tells us:
+***** If samples are related / if there is underlying relationships that suggest that certain groups of samples are more similar
+***** than you would expect
+***** If our data are worth analyzing
+**** To provide a summary of the data
+**** The objective of principal components analysis is to provide dimensionality reduction
+***** With dimensionality reduction, we can observe clusters of related samples in the lower
+***** space. Observing clusters of related samples allows us to verify that the underlying
+***** structure in the data represents the experimental design
+*** How do we use this technique in practice?
+**** Reads are countes with HTSeq by summing the number of reads in each location of a gtf.
+**** PCA is performed in R
+**** Visualization is done with rgl and an interactive website for the first 4 principal components
+*** What are the results from the PCA?
+**** I demonstrated great separation and clustering of the sample conditions through PCA
+**** This suggests an underlying structure/correlation in the samples that matches the metadata (sample condition)
+**** i.e. there is underlying evidence of experimental factors that group samples together by condition
+**** and importantly, this is apparent at all time points
+**** Four PCs are sufficient to demonstrate this spatial clustering
+** Results- Differential Expression
+*** Why look at differential expression (and other analyses: PCA, etc) [INTRODUCTION]
+**** What is differential expression analysis?
+***** Differential expression describes the response of a biological system to stimulation
+***** When stimulated, gene expression levels change, providing insight into the
+***** organization of the molecular system, hidden behind the dynamics of the change.
+***** For example, a gene whose response peaks at an early time
+***** may be a transcription factor for a gene whose response peaks afterwards.
+**** What were our experimental conditions of interest?
+***** In this experiment, I perturbed these systems by increasing the concentration
+***** of small molecule metabolites to stressful levels, and sampling at various time points
+**** Why did I investigate these factors?
+***** On the simplest level, a differential expression analysis allows us to identify genes
+***** that respond to stress. On a deeper level, this analysis allows us to identify putative
+***** transcripts that are also stress responsive. (if the transcripts were merely artifacts
+***** of library preparation and not true findings, we would expect their levels to be
+***** uniformly distributed and independent of stress). 
+***** Secondly, the factor of time allows us to identify the trend of a gene's response over time
+***** dividing the stress responsive genes into categories/clusters. Novel genes found through assembly
+***** may be regulated by similar mechanisms to the genes in their cluster. Their role in the stress response
+***** perhaps as positive or negative regulators of the stress response regulators may be inferred from their
+***** trend of the gene over time.
+***** Thirdly, clustering of these genes allows us to identify motifs upstream of the gene in a similar cluster. A tight clustering
+***** is indicative of similar regulation, adding directed edges to the current understanding of
+***** the stress response network.
+***** SUMMARY: I hypothesize that there are novel stress response regulators that have similar
+***** expression profiles to known stress responsive genes.
+***** By using gene expression clustering, I hope to identify the response regulators of each
+***** cluster and novel gene.
+*** How do we evaluate patterns of differential expression [METHODS/RESULTS]
+**** What is principal components analysis and what methods are used?
+***** Principal components analysis is a fundamental part of the analysis of large
+***** datasets. The dataset takes the shape of a NxM expression matrix with large N (> 1000), the number of genes.
+***** Datasets of such size are difficult to explore graphically, especially if M is also relatively large.
+***** In the case of differential expression analysis, the number of conditions is a function of the number of experimental
+***** factors. For this reason, PCA, is a central part of 'factor analysis.' The objective of PCA is to reduce the dimensionality
+***** of the dataset to ideally a MxM dataset, since M << N. Such a dataset describes the behavior of each condition. The reduced
+***** dataset consists of a condition's coordinates in terms of the dataset's principal components. By focusing on a few principal
+***** components at a time, this allows us to visualize each of the M conditions in 2 or 3 dimensions at a time. Combining this visualization
+***** with the condition metadata allows us to view spatial patterns in the locations of the conditions in space. Ideally, conditions
+***** that share a similar factor (e.g. stress or time) would have similar localization in the space spanned by the principal components.
+***** Practically, this is done by using computer-aided singular value decomposition to produce a matrix of the conditions
+***** in terms of the principal components. By simply visualizing the rows/conditions, selecting 2 or 3 components at a time we can identify
+***** clustering of the conditions by the factors.
+**** What is differential expression analysis and what methods are used?
+***** Differential expression analysis is usually performed on a NxM count matrix
+***** for N genes and M samples. First, the data must be normalized by library size
+***** (not to be confused with statistical normalization, where mean equals 0 etc.)
+***** Next, there is an optional regularization step, which uses a model to fit variance estimates
+***** and adjust the data (increasing or decreasing the variance for some genes.)
+***** Finally, a statistical hypothesis test is used, with the null hypothesis of
+***** no differential expression between the two conditions.
+***** The results from such analysis include p-values and log fold changes of the comparison
+***** for each of N genes, normalized/regularized expression values and variance estimates
+***** These results can be visualized by a number of packaged visualizations, can be customized to some degree
+***** with a programming language such as python's matplotlib or R's integrated/lattice/ggplot systems.
+***** However, with the size of the data and the number of comparisons, interactive visualizations are most useful.
+**** What is cluster analysis and what methods are used?
+***** Cluster analysis is the use of unsupervized machine learning techniques to partition the data
+***** specifically, the genes, into groups by related behaviors. Typical examples of clustering techniques include
+***** Hierarchical clustering and k-means. These algorithms partition the data according to a distance metric, relying
+***** on the nature of the data to provide separation and membership.
+***** Several cluster methods, distance methods, and algorithms are available to cluster data. Hierarchical clustering
+***** is useful and very well reflects the structure of the data, prone to identifying singleton clusters.
+***** Iterative k-means/medioids methods are useful and elegant, but rely on the knowledge of the correct number of clusters
+***** 'k' ahead of time. A newer algorithm known as dbscan can produce high quality results, but is sensitive to a
+***** distance parameter epsilon. A newer version of this algorithm known as optics requires only a minimum number of objects/genes
+***** per cluster.
+***** Clustering methods are most meaningful when using a subset of the initial dataset (e.g. differentially expressed only)
+***** and perhaps after removing singleton clusters through hierarchical analysis.
+***** Clustering results can be visualized as dendrograms, on a 2D PC plot, or through variations on a circular plot.
+***** Clustering results may be evaluated in a few ways, where A is clustering accuracy:
+***** First, what is the agreement between points within a cluster? As A approaches 100%, this agreement metric (inverse of distance) should increase
+***** Second, what is the agreement between points outside of a cluster? As A approaches 100%, this agrement metric should decrease.
+***** In summary, the metrics of intra and inter-cluster similarity describe the efficiency of clustering.
+***** An excellent cluster could also serve as the basis for a machine learning classifier.
+**** What is gene ontology analysis and how is it used?
+***** Gene ontologies are controlled vocabularies that describe biological processes, molecular functions, and cellular compartments
+***** of protein products. These vocabularies are useful in understanding the role of a set of genes en masse: e.g. after a cluster
+***** analysis. Gene ontologies are maintained through the GO consortium and are accessible through several tools. While many tools
+***** exist for such analyses, many are optimized for model organisms and are not available for lesser organism. This is likely due
+***** to the complex networked hierarchy of GO terminologies. While the databases themselves are not incredibly massive, it is rare to
+***** find a resource which has the terminologies linked to the gene identifiers of non-model organisms. Therefore, I will be using
+***** the resource known as 'DAVID' to provide GO annotations. In practice, a list of gene names is supplied to the DAVID web portal.
+***** The criterion for selection of the genes of this list (e.g. differential expression, cluster membership, etc.) I denote as C.
+***** The list is then analyzed for enrichment of categories of GO terms using a hypergeometric test. Finally, the independence
+***** of the GO category and the criterion C is assessed with Fisher's exact test.
+*** What do we observe from the patterns of differential expression?
+**** X genes in total were differentially expressed across the conditions
+**** The statistical criterion (model, p and log fold change thresholds) are
+***** p value of < 0.05 and LFC of > 2
+**** Y genes were upregulated at some point
+**** Z genes were downregulated at some point
+**** Time series analysis
+***** What genes are differentially expressed in the normal condition only at later time points?
+***** Are these same genes and processes enriched in the normal condition at later time points?
+***** We can analyze this by comparing a later time point to an earlier time point (t vs t-1)
+***** or by comparing a later time point to the first time point(tx vs t1)
+**** cis-RNA
+***** Differential expression for cis rnas was obtained by:
+****** Performing assembly
+****** Creating a gtf file of the novel cis rna transcripts
+****** Acquiring read counts and performing differential expression
+***** We observe that....
+** Results- Expression clustering and Gene Ontology
+*** Why do we use gene expression clustering and ontological analysis?
+*** How do we use expression clustering and ontological analysis?
+*** What were the results of clustering and ontological analysis?
+**** GO enrichment
+***** In butanol stress, ______ processes were upregulated
+***** In butyrate stress, _____ processes were upregulated
+***** Under both conditions, _______ processes were upregulated
+***** In butanol stress, _____ processes were downregulated
+***** In butyrate stress, ______ processes were downregulated
+***** Under both conditions, ______ processes were downregulated.
+***** The most commonly enriched processes were ______, _______, and _______
+** Results- Promoter motif identification
+*** Why do we use promoter prediction?
+**** Identify stress responsive motifs
+**** Use in genetic engineering
+*** How do we use this technique?
+**** Relationship with CLUSTERING
+**** Enrichment analysis with RSAT
+**** De-novo prediction with B. sub motifs and Sean Jones' microarray motifs
+*** What are the results?
+
+
 
 * Discussion
 
