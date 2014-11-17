@@ -18,8 +18,8 @@
 \usepackage[super]{natbib}
 \usepackage{subcaption}
 %\usepackage{tikz}
-\DeclareSIUnit\Molar{\textsc{m}}
-\DeclareSIUnit\Units{\textsc{u}}
+
+\include{custom_defs}
 \begin{document}
 %					THESIS - TAP ( T I T L E  +  A P P R O V A L )
 \include{thesis-tap}
@@ -40,7 +40,7 @@
                    % for Chapter 2- methods
 
 %					C H A P T E R   3 & 4 - Results
-\chapter{Results}
+
 \include{sequencing}
 \include{assembly}    % These files contain the results sections
 \include{Expression}
