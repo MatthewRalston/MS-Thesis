@@ -301,6 +301,7 @@ wild-type strain and its butanol-tolerant mutant. Mol BioSyst
 
 *** Neat side effects of the method
 **** Updated genome annotation
+
 * Methods
 ** Pre-experiment
 *** Samples were acquired at 3 time points, and processed into RNA-seq libraries
@@ -394,6 +395,10 @@ wild-type strain and its butanol-tolerant mutant. Mol BioSyst
 *** The results from the clustering analysis were used to feed an ontological analysis. 
 ** Promoter motifs
 ** Web visualizations
+
+** How to make this research reproducible??
+*** 1. step 1, sequence and filter 
+
 * Aim 1: Sequence and Assemble the Transcriptome
 ** Pre-experiment
 *** Subaim 1: Assess the prevalence of rRNA contamination and adjust
@@ -434,14 +439,12 @@ wild-type strain and its butanol-tolerant mutant. Mol BioSyst
 **** Transcript lengths are reasonable
 *** Positive operon/transcript examples
 **** Sol + ADC (tss from Durre??), explain no transcription near stop site
-
-
-
 **** BdhA, B
-**** GroESL + antisense RNA???
-
+**** GroESL
 **** Spo0A (check if literature suggests a long UTR
 **** look for CAC2079!!! (missing protein with extremely high expression)
+
+
 **** HrcA + others, revisit transcript sizes
 *** Accuracy of transcription start sites
 *** Basal rate of antisense transcription
