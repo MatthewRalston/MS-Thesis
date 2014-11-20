@@ -14,26 +14,27 @@ A primary motivation for the assembly and subsequent annotation has been the amo
 
 The standard set of transcripts were larger on average by approximately an order of magnitude.
 
+\begin{comment}
+
+
+
 \begin{figure}
 \begin{center}
 \begin{minipage}[b]{2.25in}
 \resizebox{2.25in}{2.5in}{
 \includegraphics{images/Assembly/Summary/ftranscript_length.png}
-
 }
-
 \end{minipage}
-
 \begin{minipage}[b]{2.25in}
 \resizebox{2.25in}{2.5in}{
 \includegraphics{images/Assembly/Summary/ffeature_length_1.png}
 }
-
 \end{minipage}
 \end{center}
-
 \caption{Transcript and Feature Length Distributions}
 \end{figure}
+
+\end{comment}
 
 
 
@@ -61,7 +62,7 @@ The Sol locus is a 7kb region on the pSol1 megaplasmid surrounding the Sol opero
 %          SOL LOCUS Fig 1.
 \begin{figure}
 \small
-{\includegraphics[width=\textwidth,height=2.5in]{images/Assembly/Examples/Sol/Sol-locus.png}
+{\includegraphics[width=\textwidth,height=2.5in]{images/Assembly/Examples/Sol/Curated-Sol-locus.png}
 \subcaption{Sol locus}\label{fig:1a}}
 % \label{fig:1}
 \caption{Sol Locus Overview} This operon (\subref{fig:1a}) upper track) consists of OrfL, alcohol dehydrogenase (AdhE), and Co-A transferases A and B (ctfA,ctfB). SolR (far left) and acetoacetate decarboxylase (ADC; \subref{fig:1a} lower track, right) are also shown. Coverage for the Watson and Crick strands (top and bottom tracks) are visualized with an annotation track (center). Tracks show cumulative coverage for unstressed (yellow), butanol (light green/ light orange), and butyrate (green/orange) stressed samples over all time points. Transcripts (blue), ORFs (orange), RBSes (purple), inverted repeats (yellow), promoters (green), and TSSes (red) are represented as arrows and bars.
@@ -205,7 +206,7 @@ This rather complex locus encodes the class I repressor HrcA and DnaK and DnaJ, 
 The HrcA promoter was described during the sequencing of the DnaK/J locus\cite{79}. This promoter produces the full transcript of 5kb and the smaller 3.6kb transcript terminating between DnaK and DnaJ. Two transcription start sites have been described for this region\cite{79}. Both of the two reported transcription start sites(S1 and S2) were located upstream of the CIRCE element, in contrast to groES/EL (\ref{fig:8a}). Additional bands present in the primer extension analysis were rejected similarly to the strand bands in the GroES/EL operon. An excellent Sigma factor A motif was located for the S1 site (P1,\ref{table:2}) but only an insignificant motif (p > 0.05, TTTATG(17)AAAGAT) motif was found for the weak band of the S2 site. An alternative promoter (P2, \ref{table:2}) seems to be too close to the S2 transcription start site. If the observed bands represent true transcription start sites for this operon they are transcribed from close and overlapping promoter motifs. Here we don't see any direct increase in transcription for the S1 site, most likely due sequencing difficulty near the CIRCE motif. Upon TEX enrichment, no increase or decrease in coverage can be observed near these sites, suggesting that post-transcriptional processing is not responsible for these transcription start sites. The increases in transcription observed here are relatively minor compared to the transcription of the entire HrcA operon. The P1 and P2 motifs seem to be sufficient for transcription initiation, although the coverage pattern shows evidence of complication of sequencing. In several studies\cite{75,79} transcription start sites have been discarded due to local RNA secondary structure. It is reasonable that reverse transcription in this area may be complicated by the -10kcal/mol hairpin and CIRCE motif near the 5' end of the transcript. Several authors have noted that full HrcA/DnaK operon transcripts are present at lower abundance\cite{79,82}, resulting in lower coverage and an indistinct transcription start site when considering coverage alone. In \ref{fig:8a}, it is clear that the uncurated assembly estimated the transcription start site more accurately than a coverage-only approach would provide. As we have seen, in some cases the De-bruijn graph assembly requires curation to most accurately reflect local motifs. On the other hand, this method produces a reasonable estimate of the start site. After minor curation, the transcription start site agrees with the previously described\cite{79} S2 and S1 (\ref{fig:8b}). Having established the transcription start site for the entire HrcA operon and previous transcriptional start sites are not the result of post-transcriptional processing, we move on to the higher abundance transcripts produced by this region, beginning with the GrpE operon.
 
 \paragraph{GrpE Promoter}
-The GrpE protein is an essential nucleotide exchange factor for DnaK. This protein was discovered upstream of DnaK after cloning and sequencing of the DnaK locus\cite{79}. It was postulated that a second transcription start site upstream of GrpE would explain the smaller transcripts described above and a transcription start site was determined\cite{79}. A transcription start site exists ahead of the GrpE gene in \textit{B. subtilis} as well\cite{82}. The proposed promoter ahead of GrpE does not match the Sigma factor A consensus (p > 0.05) and no alternative motifs were found. However, a substantial increase in coverage can be found further upstream from this site. The first two sites are specifically enriched in the TEX treated library, suggesting a transcription start site. Promoter motifs of higher quality are found upstream of two major peaks (\ref{fig:8b}). Looking at the entire operon (\ref{fig:8c}) it is clear that this is a substantial transcription start site. 
+The GrpE protein is an essential nucleotide exchange factor for DnaK. This protein was discovered upstream of DnaK after cloning and sequencing of the DnaK locus\cite{79}. It was postulated that a second transcription start site upstream of GrpE would explain the smaller 2.6kb transcript and a transcription start site was determined\cite{79}. A transcription start site exists ahead of the GrpE gene in \textit{B. subtilis} as well\cite{82}. The proposed promoter ahead of GrpE does not match the Sigma factor A consensus (p > 0.05) and no alternative motifs were found. However, a substantial increase in coverage can be found further upstream from this site. The first two sites are specifically enriched in the TEX treated library, suggesting a transcription start site. Promoter motifs of higher quality are found upstream of two major peaks (\ref{fig:8b}). Looking at the entire operon (\ref{fig:8c}) it is clear that this is a substantial transcription start site. The increase in coverage here is acute in contrast with the previous site in the conditions of this study. Additionally, it has been proposed that the HrcA operon is generated from post-transcriptional processing and differing transcript abundances are due to differing decay rates\cite{82}. If such a processing mechanism were present in \textit{C. acetobutylicum}, the coverage at the GrpE transcription start site would be differential with respect to the 5'-phosphate exonuclease (TEX) treatment. In \ref{fig:8b}, the coverage is not differential at this or other locations in this transcript, demonstrating that the 2.6kb transcripts is most likely a primary transcript originating from the Sigma factor A promoters P3 or P4. In summary, a novel transcription start site and promoter motif were located upstream of GrpE. No matching promoter motif or coverage pattern was observed for a previously documented transcription start site under these conditions. Additionally, coverage at the novel transcription start site was enriched with TEX treatment, suggesting that the 2.6kb transcripts are primary transcripts and not products of post-transcriptional processing.CtsR and CIRCE motifs were not found near this transcription start site. Next, the DnaK/J intergenic region is explored, which contains a terminator responsible for read-through transcription of the entire 5kb operon.
 
 \begin{figure}
 {\includegraphics[width=\textwidth,height=1.5in]{images/Assembly/Examples/HrcA/HrcA-TSS.png}
@@ -213,9 +214,9 @@ The GrpE protein is an essential nucleotide exchange factor for DnaK. This prote
 {\includegraphics[width=\textwidth,height=1.5in]{images/Assembly/Examples/HrcA/GrpE-TSS.png}
 \subcaption{GrpE Transcription Initiation Region}\label{fig:8b}}
 {\includegraphics[width=\textwidth,height=1.5in]{images/Assembly/Examples/HrcA/HrcA-operon-curated.png}
-\subcaption{Curate HrcA Locus}\label{fig:8c}}
+\subcaption{Curated HrcA Locus}\label{fig:8c}}
 \caption{HrcA Locus}
-\subref{fig:8a}) HrcA leads the 5kb tetracistronic operon. The regulation of this operon consists of Sigma factor A dependent promoters, a CstR motif, and a CIRCE motif. \subref{fig:8b}) A secondary transcription start site in upstream of GrpE is responsible for the 2.6kb and 3.8kb transcripts. The previously reported proximal TSS is shown with a large increase in coverage at a novel distal transcription start site. \subref{fig:8c}) The curated HrcA operon has two transcription start sites and one Rho-independent terminator which explain the 5kb, 3.8kb, and 2.6kb transcipts reported for this area.
+\subref{fig:8a}) HrcA leads the 5kb tetracistronic operon. The regulation of this operon consists of Sigma factor A dependent promoters, a CstR motif, and a CIRCE motif. \subref{fig:8b}) A secondary transcription start site in upstream of GrpE is responsible for the 2.6kb and 3.8kb transcripts. A large increase in coverage at a novel transcription start site is not TEX responsive. \subref{fig:8c}) The curated HrcA operon has two transcription start sites and one Rho-independent terminator which explain the 5kb, 3.8kb, and 2.6kb transcipts reported for this area.
 \end{figure}
 
 
@@ -230,6 +231,7 @@ P1 & 1423790 & 1423795 & TTGACA & 2.9\e{-4}\\
 P2 & 1423774 & 1423779 & ATGAAA & 5.3\e{-2}\\
 P3 & 1424463 & 1424468 & TTGAGG & 1.6\e{-2}\\
 P4 & 1424514 & 1424519 & TTGATT & 6.2\e{-3}\\
+P5 & 1427399 & 1427804 & TTGAAA & 2.1\e{-3}\\
 \hline
 \end{tabular}
 \end{center}
@@ -244,49 +246,75 @@ P2 & 1423800 & 1423805 & TAATGT & 1.8\e{-2}\\
 P3.1 & 1424476 & 1424481 & TAATAT & 9.9\e{-3}\\
 P3.2 & 1424482 & 1424487 & TAAAAA & 3.2\e{-2}\\
 P4 & 1424537 & 1424542 & TATGAT & 1.9\e{-3}\\
-
-\hline
+P5 & 1427430 & 1427435 & TATAGT & 2.5\e{-3}\\\hline
 \end{tabular}
 \end{center}
 \end{minipage}
 \end{table}
 
 \paragraph{DnaK/J Intergenic Region}
+The DnaK/DnaJ intergenic region is known to contain a Rho-independent terminator\cite{79,82}, thought to be responsible for the 3.8kb and 2.6kb transcripts. The \(Delta\)G of this terminator is estimated to be -13.2kcal/mol. In \ref{fig:9a}, decreased coverage is observed near this terminator, upstream of the DnaJ gene. This terminator does not contain a CIRCE element, in contrast to the inverted repeat at the HrcA promoter. A strong promoter motif (P5,\ref{table:2}) is observed very close to a sharp increase in coverage at the 5' end of the repeat. The previously reported band is found on the 3' end of the repeat, which is explained by the strong terminator motif, similar to bands near the start of GroES/EL and HrcA. To my knowledge, no DnaJ-specific Northern blots have been produced to identify a 1.2kb monocistronic transcript and thus, whether the promoter and observed increase in coverage reflect a true transcription start site remains unknown. Suggested alternative explanations include post-transcriptional processing or thermodynamic challenges for the reverse transcriptase\cite{79}. However, the coverage pattern does not show a response to the TEX treatment (\ref{fig:9a}) and the former seems unlikely here. In the DnaK/J intergenic region, a decrease in coverage is observed near a strong Rho-independent terminator. Subsequently, increased coverage is observed near a strong promoter motif that might explain previous primer-extension results\cite{79}.
 
 
+\paragraph{HrcA Transcript Termination}
+The full operon is produced in a 5kb transcript which terminates after the DnaJ gene. In \ref{fig:9b}, a dramatic decrease in coverage is observed at the end of the DnaJ gene, 50 bases before the stop codon. Four terminator prediction software did not produce results for the transcription termination region shown here. This location should contain a non-intrinsic termination signal to explain the dramatic decrease in coverage. The residual signal from the nearby ribosomal methyltransferase(CA_C1284) matches well with evidence of a longer 8kb transcript in \textit{B. subtilis}\cite{82}. Given the dramatic decrease in coverage observed here, a reasonable transcription stop site for the 5kb operon can be assumed to follow the DnaJ gene(\ref{fig:8c}). Having discussed the regulatory regions of the HrcA operon, the final task is to summarize the transcript lengths, their regulation, and identify missing regulatory elements.
 
-In this dataset, the coverage pattern matches very well with the previously published transcript size of 5kb. Interestingly, the HrcA transcription start site determined by the uncurated assembly is comparable to previous studies. Moreover, the assembly predicts a transcription start site with reasonable accuracy, considering the level of residual signal from the upstream gene. The data could certainly reflect the transcriptional terminator downstream of DnaK, but no Rho-independent terminator was found downstream of DnaJ using three different algorithms. The termination of this transcript may be due to a non-intrinsic termination mechanism. This region has also been fused to signal from the downstream gene.
 
 \begin{figure}
 \small
-{\includegraphics[width=\textwidth,height=1.5in]{images/Assembly/Examples/HrcA/HrcA-locus.png}
-\subcaption{Operon consisting of HrcA, GrpE, DnaK, and DnaJ}\label{fig:7a}}
-{\includegraphics[width=\textwidth,height=1.5in]{images/Assembly/Examples/HrcA/HrcA-TSS.png}
-\subcaption{HrcA transcription initiation region.}\label{fig:7b}}
-{\includegraphics[width=\textwidth,height=1.5in]{images/Assembly/Examples/HrcA/GrpE-TSS.png}
-\subcaption{GrpE transcription initiation region.}\label{fig:7c}}
 {\includegraphics[width=\textwidth,height=1.5in]{images/Assembly/Examples/HrcA/DnaKJ-IGR.png}
-\subcaption{DnaK-DnaJ IGR and DnaJ transcription initiation region}\label{fig:7d}}
+\subcaption{DnaK/DnaJ Intergenic Region}\label{fig:9a}}
+{\includegraphics[width=\textwidth,height=1.5in]{images/Assembly/Examples/HrcA/HrcA-termination.png}
+\subcaption{HrcA Transcription Termination Region.}\label{fig:9b}}
 \caption{HrcA locus}
-\subref{fig:7a}) The highly expressed HrcA locus encodes several transcripts of different size. \subref{fig:7b}) The assembled transcription start site for the HrcA gene provides a reasonable estimate, considering the level of background signal for this region. \subref{fig:7c}) The transcription start site is not distinguishable in the coverage data. \subref{fig:7d}) The intergenic region between DnaK and DnaJ contains the only hairpin for this operon, which matches a decrease in coverage. The reported transcription start site is not identifiable from the coverage in this region.
+\subref{fig:9a}) The DnaK/DnaJ intergenic region consists of a Rho-independent terminator for the 2.6kb and 3.8kb transcripts. The coverage this region rebounds after a promoter motif and is not depleted with TEX treatment. \subref{fig:9b}) Near the end of the DnaJ gene, a dramatic decrease in coverage signals the end of the 5kb HrcA operon. No terminators can be found in this region, suggesting a non-intrinsic termination signal.
 \end{figure}
+
+
+\paragraph{HrcA/GrpE Transcript Lengths}
+In the HrcA locus, two transcription initiation regions and two termination regions are responsible for 3 previously reported transcript sizes, 2.6, 3.8, and 5kb, respectively. The longest transcript observed here is 4,838bp from the HrcA transcription initiation region to the termination region downstream from DnaJ. The second largest observable transcript begins at one of the two start sites from the GrpE transcription initiation region and ends at DnaJ termination region, leading to transcripts between 3,778 to 4,125 bases, respectively. This region is the most abundant portion of this operon and may contain at least two smaller transcripts. The first of these species would begin at the GrpE transcription initiation region and terminate in the DnaK/J intergenic region. This type of transcript would range in size between 2,642bp and 2,989bp, respectively. The fourth and final transcript could originate from the DnaK/J intergenic region and terminate at the end of DnaJ, with a length of approximately 1.2kb. In the model organism \textit{B. subtilis}, larger transcripts are produced from this region, up to 8kb in length\cite{82}. It was observed that the transcripts and proteins of this region increase and decrease at different rates\cite{82}. Determining all the potential transcription start sites inside a region of continuous transcription is an ongoing challenge for understanding of the stress response. To conclude, the regulatory motifs and their locations in this region are summarized.
+
+\paragraph{HrcA Locus Regulation}
+Both Sigma factor A or H dependent promoters could be observed in the transcription initiation regions, as detailed above (\ref{table:2}). Sigma factor A promoters are under the control of the 6S small RNA, which has considerable expression in this study. Therefore, the activity of this locus must be considered with respect to global Sigma A promoter activity. Additionally, the HrcA transcription initiation region is under the direct control of both a CIRCE motif (3.2\e{-13}) and a CtsR motif (1.8\e{-7})\cite{42}. The inverted repeat in the DnaK/J intergenic region does not match either motif and is therefore most likely a Rho-independent terminator. The DnaJ termination region (+/- 200bp from the DnaJ stop codon) does not contain a detectable Rho-independent terminator and thus terminates transcription in a non-intrinsic manner, as previously suggested\cite{83}. The sequencing technique has produced excellent results for this region. The assembly produced a better estimate of the transcription start site than would be expected from coverage alone and a novel transcription start site was identified. Additionally, exact coordinates of regulatory motifs match well with the observed transcription start sites. Finally, potential transcript sizes were discussed to the extent permissible with this technique and the complexity of this region. Next, the Spo0A locus is considered an important gene in this organism that has not had the level of molecular investigation of the previous examples.
+
+
+
 
 %          S p o 0 A
+\subsubsection{Spo0A Locus}
+\paragraph{Spo0A}
+Spo0A is the master regulator of sporulation and stationary phase phenomena. This protein transduces growth-limiting and stressful signals into sporulation behavior in a number of firmicutes. In previous studies, Spo0A was shown to be translated from a 0.9kb transcript in \textit{C. acetobutylicum}\cite{84}. Additionally, a Sigma factor A and Sigma factor H motif were identified upstream of spo0A, but sadly neither the motifs nor the coordinates were provided. A single Sigma factor A motif (\ref{table:3}) was identified near a substantial increase in transcriptional activity (\ref{fig:10a}). A single Spo0A box was reported upstream of Spo0A\cite{84} and can be seen in \ref{fig:10a}. A single terminator motif is located ~130 basepairs downstream of the stop Spo0A stop codon. The uncurated assembly did not identify single start or stop sites for this gene, fusing Spo0A with signal on either side of the gene. After curation with these information combined, we observe a transcript of 1,147bp, longer than the 0.9kb transcript detected by Northern blot in a previous study of this locus\cite{84}. This represents the first documentation of the Spo0A transcript boundaries in \textit{C. acetobutylicum}.
 
-Spo0A is the master regulator of sporulation and stationary phase phenomena. This protein is thought to ultimately transduce growth-limiting and stressful signals into sporulation behavior in a number of anaerobic firmicutes. In previous studies, Spo0A was shown to be translated from a 0.9kb transcript in \textit{C. acetobutylicum}. Here we observe a slightly longer transcript of ~1.1kb according to the pattern of coverage. However, no Rho-independent terminators were found immediately downstream (\textless  200bp) of Spo0A, suggesting either a non-intrinsic termination mechanism or differing transcript sizes from those previously reported. Unfortunately, the boundaries represented by this coverage pattern were not detected due to the background signal in the area. Consequently, this region needs some remediation and is the first example of a completely fused transcript, not merely an extension.
 
-In a nearby location, the genes CAC2073-2078 are found in a tight grouping near a large peak of expression. This peak correpsonds to an uncharacterized protein CAC2079 that is present in UniProt but absent from NCBI and KEGG databases. Its coverage appears to be largely above 20k per base, independent of the surrounding regions (although the transcript is indeed fused). Bioinformatic analysis suggests that it shares sequence similarity to proteins in the \textit{Clostridia}, \textit{Bacilli}, \textit{Baceteroidetes}, and \textit{Halobacteria}. While there was no common catalytic or active domain unifying this group of homologs, the region of homology tends to precede a transmembrane motif. Further analysis via PSI-blast result suggests sequence similarity to mATE (Multidrug And Toxic-compound Extrusion) efflux family proteins. mATE family proteins use electrochemical gradients to export antibiotics and other toxic compounds. The data suggest that the expression of this protein is important to \textit{C. acetobutylicum} and it will be interesting to examine the expression profile statistically. This instance demonstrates the synergy of older annotations with the newer coverage data and once again the need for semi-automated curation. Next we explore another stress-responsive region with a regulatory protein, the HrcA locus.
+\begin{table}
+\caption{Spo0A Regulatory Motifs}\label{table:3}
+\begin{minipage}[b]{2.5in}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}\hline
+\multicolumn{5}{c}{Sigma A}\\\hline
+Motif & Start & End & Sequence & p-value\\\hline
+-35 & 2173565 & 2173560 & TTGATT & 6.2\e{-3}\\
+-10 & 2173537 & 2173542 & TAAAAT & 1.5\e{-3}\\
+\hline
+\end{tabular}
+\end{center}
+\end{minipage}
+\begin{minipage}[b]{2.5in}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}\hline
+\multicolumn{5}{c}{Spo0A Box}\\\hline
+Motif & Start & End & Sequence & p-value\\\hline
+1 & 2173430 & 2173436 & TGTCGAA & 1.9\e{-4}\\
+\hline
+\end{tabular}
+\end{center}
+\end{minipage}
+\end{table}
 
-\begin{figure}
-\small
-{\includegraphics[width=\textwidth,height=1.5in]{images/Assembly/Examples/Spo0A/Spo0A-locus.png}
-\subcaption{Spo0A transcript (center) fused to signal from neighboring regions}\label{fig:6a}}
-{\includegraphics[width=\textwidth]{images/Assembly/Examples/Spo0A/CAC2079.png}
-\subcaption{Upstream region of Spo0A, including CAC2079, a putative protein missing from many databases.}\label{fig:6b}}
 
-\caption{Spo0A locus}
-\subref{fig:6a}) The Spo0A transcript is found in a region of sufficient k-mer complexity and background coverage for the assembled transcript to be fused to signal from neighboring operons. This region clearly requires attention from curation strategies. \subref{fig:6b}) The region upstream of Spo0A consists of a late stage sporulation protein and a group of proteins in tight formation. Interestingly, there is a missing annotation in NCBI and KEGG for protein CAC2079 near a large peak of expression, in between the annotated proteins CAC2078 CAC2080.
-\end{figure}
+\paragraph{Missing from the Databases: CA_C2079}
+
+In a nearby location, the genes CAC2073-2078 are found in a tight grouping near a large peak of expression. This peak correpsonds to an uncharacterized protein CAC2079 that is present in UniProt but absent from NCBI and KEGG databases. Its coverage appears to be largely above 20k per base, independent of the surrounding regions (although the transcript is indeed fused). Bioinformatic analysis suggests that it shares sequence similarity to proteins in the \textit{Clostridia}, \textit{Bacilli}, \textit{Baceteroidetes}, and \textit{Halobacteria}. While there was no common catalytic or active domain unifying this group of homologs, the region of homology tends to precede a transmembrane motif. Further analysis via PSI-blast result suggests sequence similarity to mATE (Multidrug And Toxic-compound Extrusion) efflux family proteins. mATE family proteins use electrochemical gradients to export antibiotics and other toxic compounds. The data suggest that the expression of this protein is important to \textit{C. acetobutylicum} and it will be interesting to examine the expression profile statistically. This example illustrates the synergy of this transcriptomic dataset with existing annotation and the benefit of curation. 
 
 
 \subsection{Identify and Attempt to Resolve Remaining Issues}
