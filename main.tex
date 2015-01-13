@@ -20,12 +20,15 @@
 \usepackage{subcaption}
 \usepackage{csvsimple}
 \usepackage{xfrac}
+\usepackage{wrapfig}
 \usepackage{geometry}
+\usepackage[T1]{fontenc}
+
 %\usepackage{tikz}
 
 
 \include{custom_defs}
-\include{tables}
+
 \begin{document}
 %					THESIS - TAP ( T I T L E  +  A P P R O V A L )
 \include{thesis-tap}
@@ -49,10 +52,10 @@
 
 \include{sequencing}
 \include{assembly}    % These files contain the results sections
-\include{Expression}
+%\include{Expression}
 
 %					C H A P T E R   5 - Discussion
-\include{discussion}    % This file (discussion.tex) contains the text
+%\include{discussion}    % This file (discussion.tex) contains the text
                    % for Chapter 4- discussion
 
 %					C H A P T E R   6 - Conclusions
@@ -63,25 +66,16 @@
 
 
 %					R E F E R E N C E S
-%\include{ref}      % This file (ref.tex) contains the text
-                   % for the references.
-                   
-%\include{bib}      % This file (bib.tex) contains the text
-                   % for a bibliography.
-                                      
 \include{bibtex}	 % This file (bibtex.tex) contains the text
                    % for a bibliography if using BibTeX with
                    % sample.bib
-                                      
-%\include{app}      % This file (app.tex) contains the text
-                   % for one Appendix. 
 
 %			A P P E N D I X      A
+\include{appendix}
 %\include{appA}     % This file (appA.tex) contains the text
                    % for Appendix A. 
  
  %			A P P E N D I X      B
 %\include{appB}     % This file (appB.tex) contains the text
                    % for Appendix B.   
-       
 \end{document}

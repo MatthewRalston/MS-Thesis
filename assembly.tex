@@ -2,34 +2,26 @@
 
 
 \chapter{Transcriptome Assembly}
-The high sequencing depth achieved in this sequencing experiment suggests that even with low abundance transcripts, boundaries can be determined effectively. Interestingly, the level of depth has also revealed a level of background signal that has not been addressed by similar sequencing efforts (citations). The appropriate bioinformatic tools for transcript boundary determination are transcriptome assembly algorithms. Of those that utilize strand specific and paired end data, Trinity was chosen after considering the results of comparative reviews (Nature rev, other comparative reviews). Reference assemby was considered preferable, given the extremely high alignment rate (reference sequencing statistics figure).
+The high sequencing depth achieved in this experiment suggested that even for low abundance transcripts, boundaries can be determined effectively. To this end, transcriptome assembly was the computational technique selected for its superiority in comparison to depth-only techniques (ref?? background, references?). A wide range of open source tools and approaches optimized for the transcriptome have been reviewed recently(Nat review assembly??). Recall that assembly is resistant to the high variability of expression measurements in experiments with significant depth. It is also resistant to sequence-specific biases and low complexity background signals. Therefore, transcriptome assembly was chosen to summarize the gene structure present in this high depth sequencing dataset.
 
-
+It has been recently noted(Nat review assembly) that transcriptome assembly is sensitive to errors such as residual adapters, substitutions, and duplicate reads. Thus, adapters and primer-dimers were removed, reads were trimmed by their quality scores, and duplicate reads were removed after alignment (\ref{fig:3}, appendix alignment summary, methods data processing). This trimming and filtering strategy resulted in both paired and unpaired strand-specific reads aligning to the genome. As previously described, a subset (83\%) of the reads were properly-paired according to the forward-reverse(FR) sequencing chemistry. Two assemblies were conducted to understand the effect of the extra unpaired or improperly-paired reads compared to an assembly of the properly-paired data alone.
 
 % This tex file includes information about the results of the assembly, including its optimization, and summarization using some simple statistics about the UTRs, and the number of ORFs included from the assembly. 
 \input{uncurated_assembly.tex}
-
 % This tex file includes some basic information about construction of the genome browser (should really be subsection of the 'uncurated_assembly', as a transition to the examples. 
 \input{browser.tex}
+% This tex file shows figures and a description that describes the background signal
+\input{background_signal.tex}
 
 
 %     A s s e m b l y     E x a m p l e s
 \input{assembly_examples.tex}
 
-\section{Identify and Attempt to Resolve Remaining Issues}
-There are two principal challenges relating to this uncurated transcriptome assembly. The first relates to the qualification of novel transcripts which I will defer to a later time. The second involves the curation of the 1057 transcripts which encode reference CDSes. After considering the examples above, we are left with a few types of misassembly to address.
-\begin{enumerate}
-\item Partial transcripts which overlap reference ORFs, but do not completely contain them. (e.g. BdhA)
-\item Extended transcripts that possess larger UTRs than would be expected with respect to promoter and terminator motifs and coverage patterns. (e.g. Adc, CtfA/B)
-\item Fused transcripts where the transcript from one gene is completely fused with signal from neighboring loci, with respect to prior knowledge, promoter, and terminator motifs (e.g. Spo0A).
-\end{enumerate}
-
-The first issue requires the simple solution of adjusting the transcript boundaries to include reference ORFs where there is not complete inclusion. Practically this requires only some minimal scripting and the use of '\href{http://bedtools.readthedocs.org/en/latest/content/tools/merge.html}{merge}' from bedtools, a toolkit for genomic set operations. The second issue requires a slightly more complicated solution of integrating information of regulatory motifs, terminators, and coverage information to find the solution that produces the most agreement between these various sources. In practice, I will integrate the various sources in the genome browser for context with the coverage information from this experiment. No completely automated tools exist to accomplish this. However, on average each transcript requires only a minimal amount of decision and should in principle be easy to curate. The third type of gene is completely fused to signal from other genes or noise. In the case of Spo0A, the true signal was simple to distinguish from noise, even in the absence of a Rho-independent terminator. In other cases the solution may not be so simple but contextual information about ontology combined with the various signals of coverage and stress response, promoters, and terminators make the problem more tractable. 
-
-In principle, each of the pieces of information that I will integrate will not reproduce the transcript boundary on its own. In the examples above there are instances where the coverage alone fails to describe the transcript boundary, while the linguistic complexity of the dataset, used by the assembly algorithm, reproduces the boundary to a good extent. In other instances the opposite is true: a dramatic change in coverage near terminators or other signals is not recognized by the assembly alone. For that matter, there appear to be instances of non-intrinsic termination to complicate matters further. Therefore, these information are synergistic with respect to defining transcript boundaries and the absence of one signal may be made up for by the presence of another.
-
-\section{Novel Transcripts}
+\input{resolve.tex}
 
 
+\section{First Strand-Specific Transcriptome Assembly for \itshape Clostridia}
 
+In this chapter, a strand-specific transcriptome assembly was conducted with the high-depth sequencing dataset obtained for \textit{C. acetobutylicum} under various experimental conditions. The resulting boundaries were determined precisely due to the laboratory and informatic quality controls of this work. Significantly, these results represent the first strand-specific transcriptome assembly for the class \textit{Clostridia}. Moreover, the innovative approach described here addresses misassemblies that result from the limitations of modern sequencing technology, issues frequently neglected by similar studies.
 
+The initial assembly from the subset of properly-paired reads had maximal size, expression, and inclusion of reference protein annotations compared to the assembly from the full dataset. However, several types of misassemblies were present in the dataset that were observed statistically and with specific examples. To correct these errors, a customized genome browser was developed for integrative analysis of complexity, sequencing depth, and genome annotations. Heuristics for curation of the assembly were described and exemplified with canonical \textit{C. acetobutylicum} transcripts. In each case, the curation method produced transcript boundaries with precision comparable to previous targeted studies. The curation method was applied to the entire pSol1 megaplasmid, fixing misassembled transcripts. The curation technique deeply improved the type I error rate for transcript discovery and boundary determination. The integrative analyis was resilient to background signals of the sequencing technique, resulting in a high-quality assembly for the pSol1 megaplasmid. Re-evaluation of the final assembly showed transcriptome feature lengths in agreement with prokaryotic averages. These data clearly suggest the efficacy of this technique and the precision of the results.
