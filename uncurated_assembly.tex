@@ -13,7 +13,6 @@ Initial transcriptome assemblies were conducted for the full dataset and the sub
 In this comparison, the assemblies were inspected for errors that affect these qualities. The previous chapter described techniques for the minimization of frequently ignored background signals, not quantified by similar studies. While spectrophotometric and electrophoretic analyses suggested pure RNA, some residual signals are often encountered in RNA-seq studies.\cite{176} Automated methods such as assembly encounter difficulty when background and overlapping signals are sufficiently complex. To identify potential false positives, the results were inspected for misassemblies, artifacts from the graphs constructed for the dataset. Documentation and analysis of these artifacts was required for assembly selection.
 
 \begin{table}
-\caption{Assembly Comparison}\label{table:assemb_compare}
 \begin{center}
 \begin{tabular}{|c|c|c|}\hline
   & All Reads & Proper Pairs\\\hline\hline
@@ -27,8 +26,9 @@ Novel Transcripts & 2129 (73\%) & 3266 (76\%)\\\hline
 Novel Mb & 2.4 (39\%)& 2.64 (37\%)\\\hline
 \end{tabular}
 \end{center}
+\caption{Assembly Comparison: Proper-pairs Produce Large, Inclusive Assemblies}\label{table:assemb_compare}
 \small
-This table contains statistics for the two transcriptome assemblies, the first with all sequenced reads and the second with only proper-pairs. The total number of assembled transcripts and the size of their span is reported. The number and percentage of reference ORFs contained within the so called ``standard'' transcripts is provided. Additionally, the number of the standard transcripts and their span is provided additionally. The same statistics are presented for novel transcripts as well.
+This table contains statistics for the two transcriptome assemblies, the first with all sequenced reads and the second with only properly-paired reads. The total number of assembled transcripts and the size of their span is reported. A group of transcripts contained the majority of reference ORFs, referred to as the ``standard'' set of transcripts. The number and percentage of included reference ORFs are both provided. Additionally, the number of the standard transcripts and their span is provided. Finally, these statistics are also presented for novel transcripts.
 \end{table}
 
 \subsubsection{Assembly Comparison}
@@ -42,7 +42,8 @@ First, simple statistics were compiled for both assemblies (Table \ref{table:ass
 \begin{center}
 \includegraphics[width=\textwidth,height=4in]{images/Assembly/Comparison/PairvsTot_boxplot.png}
 \end{center}
-\caption{Transcript Depth Comparison}\label{fig:5.1}
+\caption{Depth Comparison: Increased Depth Observed in Properly-paired Assembly}\label{fig:5.1}
+Clearly, the standard transcripts (middle left, middle right) have higher per-base sequencing depth than novel transcripts (far-left, center). In fact the distribution of depth in standard transcripts is comparable to the reference ORFs/CDSes themselves (far right). A noticeable albeit insignificant difference can be observed between the two assemblies in term of their per-base sequencing depth. Boxplots on the left show the distribution of per-base sequencing depth from transcripts assembled from the Total dataset (left, middle left). The properly paired dataset shows a slight increase in sequencing depth for novel (center) and standard (middle right) transcripts.
 \end{figure}
 
 
@@ -63,7 +64,12 @@ First, simple statistics were compiled for both assemblies (Table \ref{table:ass
 \end{minipage}
 \end{center}
 \caption{Transcript Length Comparison and Uncurated Feature Lengths}
-With improved inclusiveness (Table \ref{table:assemb_compare}), expression levels(Figure \ref{fig:5.1}), and comparable transcript sizes \subref{fig:5.2a}), the uncurated assembly from the properly-paired reads was selected for further evaluation. \subref{fig:5.2b}) ``Standard'' transcripts, both mono and polycistronic (operon), are present along with 3120 putative novel transcripts. The standard transcripts are close in size to prokaryotic norms\cite{86}.
+\subref{fig:5.2a}) Length Comparison: Transcripts from the assembly of properly-paired reads (yellow) have comparable lengths compared to the assembly from the total dataset (blue). 
+
+\subref{fig:5.2b}) Uncurated Feature Lengths: Various classes of transcripts and their associated lengths are depicted here, including polycistronic/operonic transcripts (green), all standard transcripts (yellow), novel transcripts (orange), and more. The standard transcripts appear to be slightly larger (< 300bp) on average than those from \textit{E. coli},\cite{86} likely suggesting misassembly.
+
+
+With improved inclusiveness for reference proteins (Table \ref{table:assemb_compare}), increased expression levels(Figure \ref{fig:5.1}), and comparable transcript sizes \subref{fig:5.2a}), the uncurated assembly from the properly-paired reads was selected for further evaluation.
 \end{figure}
 
 
@@ -77,7 +83,7 @@ In the uncurated assembly, 4,177 transcripts spanning 7.18Mb were assembled. Thi
 \includegraphics[width=\textwidth,height=4in]{images/Assembly/Summary/Depth_vs_length.png}
 \end{center}
 \caption{Expression (Avg. Read Count) vs Transcript Length}\label{fig:5.3}
-Three additional populations are present in the assembled transcripts. Short novel transcripts with high expression are candidates for \textit{cis}-encoded antisense small RNAs. Those that are long in length with weaker expression tend to be found antisense from a standard transcript and thus represent background antisense signal (\textless 5\% sense expression). However, the majority of the novel transcripts are short in length with weak transcription and most likely represent background signals such as spurious transcription.
+Three additional sub-populations are present in the assembled transcripts. Short novel transcripts with high expression are candidates for \textit{cis}-encoded antisense small RNAs (upper left). Those that are long in length with weaker expression (lower right) tend to be found antisense from a standard transcript and thus represent background and false-positive antisense signal (\textless 5\% sense expression). The majority of the novel transcripts are short in length with weak transcription (lower left) and most likely represent background signals such as spurious transcription. A large number of transcripts possess comparable lengths and read counts to standard transcripts. This suggests that despite the false-positive signal captured with this level of sensitivity, truly novel transcripts were detected.
 \end{figure}
 
 Additional data showed the characteristics of the transcripts themselves and painted a complicated picture. The standard transcripts, including mono and poly-cistronic transcripts, were larger than the novel set(\ref{fig:5.2b}). More surprisingly, they were larger on average than estimates of the mean transcript size in \textit{E. coli}\cite{86}. In addition, the standard set possessed higher levels of expression(\ref{fig:5.1}). Together, there was a trend between length and expression that divided the novel transcripts into distinct classes(\ref{fig:5.3}). The majority of the novel transcripts were short in length (200-500bp) with low read counts. Depending on local depth and annotation patterns, some of these putative transcripts were likely technical artifacts. Longer novel transcripts with similarly low read counts were most likely assemblies of background (1-5\%) or antisense signal. Outside of these groups, there were a number of highly expressed, short, novel transcripts that could reflect small peptide encoding transcripts or small RNAs. Equally expressed and larger transcripts could also represent novel transcripts and protein encoding genes. The trend between transcript length and expression indicated the presence of both novel transcripts and technical artifacts in the assembly results, suggesting that further investigation and correction would be necessary.
@@ -88,19 +94,21 @@ Additional data showed the characteristics of the transcripts themselves and pai
 \begin{center}
 \begin{minipage}{.5\textwidth}
 \begin{center}
-{\includegraphics[width=\linewidth,height=3in]{images/Assembly/Summary/futrlength.png}
+{\includegraphics[width=\linewidth,height=3in]{images/Assembly/Summary/putrlength.png}
 \subcaption{5' and 3' Untranslated Regions}\label{fig:5.4a}}
 \end{center}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
 \begin{center}
-{\includegraphics[width=\linewidth,height=3in]{images/Assembly/Summary/fintrautrlength_1.png}
+{\includegraphics[width=\linewidth,height=3in]{images/Assembly/Summary/pintrautrlength_1.png}
 \subcaption{Intra-operonic Untranslated Region}\label{fig:5.4b}}
 \end{center}
 \end{minipage}
 \end{center}
 \caption{Untranslated Regions}
-The standard transcripts contain untranslated regions that suggest a level of misassembly, indicated by extended 5' and 3' UTRs (\subref{fig:5.4a}). The 3' UTRs display a slightly bimodal pattern. Some of the extended UTRs may encode previously unannotated proteins or riboregulatory elements.
+\subref{fig:5.4a}) While terminal UTRs can contain regulatory sequences, most in \textit{E. coli}\cite{87} are around or less than 100bp. It is exciting to speculate about the existence of unannotated proteins, although these results most likely indicate misassembly.
+
+\subref{fig:5.4b}) Many intra-operonic UTRs agree with work from prior predictions\cite{188}, although misassembly has not been excluded for the UTRs described here. Curation of the initial assembly could reveal unannotated proteins within these large UTRs.
 \end{figure}
 
 An additional illustration of misassembly was seen in the distribution of untranslated region (UTR) lengths (\ref{fig:5.4a}). A number of the standard transcripts possess 5' and 3' UTRs that were several hundreds of basepairs in length, while most UTRs previously determined in \textit{C. acetobutylicum}\cite{63,64,69,74,76} and \textit{E. coli}\cite{87} are approximately 100bp. Some of these could have contained riboswitches or unannotated proteins, although likely not at the frequency shown by this histogram. Therefore, it was desirable to address these misassemblies through a curation process.

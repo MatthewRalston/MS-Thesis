@@ -20,7 +20,6 @@ The curation process was used in the previous section to address the misassembli
 \end{enumerate}
 
 \begin{table}
-\caption{Curation Effect}\label{table:assemb_curation}
 \begin{center}
 \begin{tabular}{|c|c|c|}\hline
   & Uncurated & Curated\\\hline\hline
@@ -34,6 +33,8 @@ Novel Transcripts & 122 & 24\\\hline
 Novel Mb & 100487 & 14994\\\hline
 \end{tabular}
 \end{center}
+\caption{Final Assmelby Statistics and Curation Effect}\label{table:assemb_curation}
+This table shows final assembly statistics and the corrective power of the curation method. The number of misassembled baspairs and transcripts has been substantially reduced. Two additional ORFs/CDSes were included upon curation and a number of standard transcripts were split in half. Interestingly, about 20\% of the assembled transcripts were novel, a good number of interesting candidates from a small portion of the total \textit{C. acetobutylicum} genome.
 \end{table}
 
 \begin{wrapfigure}{R}{0.4\textwidth}
@@ -41,10 +42,10 @@ Novel Mb & 100487 & 14994\\\hline
 \vspace{-20pt}
 \begin{center}
 \includegraphics[width=\linewidth,height=3in]{images/Assembly/Curation/PairvsCuration_length.png}
+\caption{Transcript Lengths}\label{fig:5.20}
+The transcript lengths were improved after curation, centering the distribution on the standard transcripts on the \textit{E. coli} average of 1.1kb\cite{86}.
 \end{center}
 \vspace{-20pt}
-\caption{Transcript Lengths}\label{fig:5.20}
-The transcript lengths were improved after curation, centering the distribution on the standard transcripts on the \textit{E. coli} average\cite{86}.
 \end{wrapfigure}
 
 These heuristics guided the curation process, addressing the errors described in previous sections, similarly to the treatment of the example transcripts. The most common types of misassemblies were the result of residual background signal assembled and mixed with true transcriptomic signal. The three types of errors were corrected during curation of the entire 192kb pSol1 megaplasmid, resulting in 111 transcripts spanning 192kb (\ref{table:assemb_curation}). In addition to improving the precision of transcript boundary determination, the type I error for transcript discovery was reduced by removing a large number of false positive transcripts.
@@ -65,7 +66,9 @@ These heuristics guided the curation process, addressing the errors described in
 \end{minipage}%
 \end{center}
 \caption{UTR and IGR Lengths}
-The UTR (\subref{fig:5.21a}) and IGR (\subref{fig:5.21b}) length distributions were considerably improved by the curation method. 
+\subref{fig:5.21a}) UTR lengths were considerably improved by curation, with most less than 100bp, in agreement with \textit{E. coli} averages.\cite{87} Interestingly, a number of large 3' and intraoperonic regions remain after curation, suggesting either regulatory roles or the presence of unannotated proteins.
+
+\subref{fig:5.21b}) The size of intragenic regions (IGRs) increased upon curation after the drastic reduction in false-positive basepairs (\ref{table:assemb_curation}).
 \end{figure}
 
 The transcript length distributions agreed with prokaryotic averages (\ref{fig:5.20a}) after improved precision detailed above.\cite{86} Specifically, the distribution of untranslated region lengths closely matched \textit{E. coli} averages\cite{87} (\ref{fig:5.21a}). In contrast to the decreased transcript and UTR lengths, intergenic region lengths increased upon curation (\ref{fig:5.21b}). The curated transcripts are evenly spaced along the pSol1 megaplasmid, in contrast to the uncurated assembly. Additionally, both the standard and novel transcripts have higher average per-base depth after curation, comparable to the coverage of the reference ORFs (\ref{fig:5.22}). These data show considerable agreement with \textit{E. coli} averages and improvement over the uncurated assembly results.
@@ -73,8 +76,10 @@ The transcript length distributions agreed with prokaryotic averages (\ref{fig:5
 
 
 \begin{figure}
+\small
 \includegraphics[width=\textwidth]{images/Assembly/Curation/CurvsUncur_boxplot.png}
 \caption{Cumulative Depth Distribution}\label{fig:5.22}
+After curation, the expression level as indicated by the per-base sequencing depth has increased substantially. While uncurated novel transcripts (far-left) had an order of magnitude lower average sequencing depth than found in reference ORFs (far-right, the 24 curated novel transcripts (center) had comparable sequencing depth. The depth of uncurated standard transcripts (middle left) were only slightly improved in terms of depth by curation (middle right). The best improvement in the novel transcripts was the increased precision of the final transcript boundaries.
 \end{figure}
 
 

@@ -11,7 +11,7 @@ A fractional-factorial experimental design was selected to best sample multiple 
 \includegraphics[width=\textwidth,height=3in]{images/Sequencing/Growth_curve.png}
 \caption{\textit{C. acetobutylicum} Growth Curve}
 \label{fig:4.1}
-This growth curve, adapted from Jones \textit{et al.},\cite{180} illustrates the time points selected for the experimental design. Populations of \textit{C. acetobutylicum} grow through the exponential phase (A$_{600}$ of 1.0), producing carboxylic acids, including butyric acid, during the transition phase. Then, the acids are reassimilated and reduced into solvents such as butanol. The stress types butyrate, butanol, and control were assayed in this experiment, in addition to time points 15(i.), 75(ii.), 150(iii.), and 270 minutes (iv.) after synchronization of the cultures at A_{600} of 1.0. The squares, circles, and triangles represent measurements of A_600, butyrate, and butanol from \textit{C. acetobutylicum} fermentation, respecively.\cite{180}
+This growth curve, adapted from Jones \textit{et al.},\cite{180} illustrates the time points selected for the experimental design. After the exponential growth phase (A), \textit{C. acetobutylicum} cells (squares) produce carboxylic acids, such as butyric acid (circles), at increased rates during the transition phase(B). Then, the acids are reassimilated and reduced into solvents such as butanol (triangles) during the stationary phase(C). The stress types butyrate, butanol, and control were assayed in this experiment, in addition to time points 15(i.), 75(ii.), 150(iii.), and 270 minutes (iv.) after synchronization of the cultures at A_{600} of 1.0.
 \end{figure}
 
 \section{Desirable Data Qualities}
@@ -38,10 +38,10 @@ After washing with ethanol, the absence of salts, divalent cations, and proteins
 \begin{figure}
 \includegraphics[width=\textwidth,height=3in]{images/Sequencing/RNA-integrity.png}
 \caption{RNA Quality}\label{fig:4.2}
-In this electropherogram from the BioAnalyzer, dominant and intact rRNA peaks are visible along with a substantial small RNA population, resulting from the miRNeasy kit used for RNA extraction.
+In this BioAnalyzer electropherogram, sharp and intact rRNA peaks are visible along with a substantial small RNA population, resulting from the miRNeasy kit used for RNA extraction.
 \end{figure}
 
-RNA integrity is commonly analyzed by interpreting ribosomal RNA bands obtained with electrophoretic techniques. Specifically, a small peak width of the rRNA electrophoretic bands with little background signal indicates that the RNA high quality (e.g. RNA Integrity Number). A representative electropherogram is shown in \ref{fig:4.2}. The results indicated that the RNA was undegraded, with sharp peaks for the 16S and 23S rRNA bands. At each QC step (\ref{fig:4.3}), the RNA had clear pellets, clean spectrophotometric ratios, and the electrophoresis suggested that the RNA were undegraded. The passing samples were then used in subsequent hybridization and enzymatic steps.
+RNA integrity is commonly analyzed by interpreting ribosomal RNA bands obtained with electrophoretic techniques. Specifically, a small peak width of the rRNA electrophoretic bands with little background signal indicates that the RNA is high quality (e.g. RNA Integrity Number). A representative electropherogram is shown in \ref{fig:4.2}. The results indicate that the RNA was undegraded, with sharp peaks for the 16S and 23S rRNA bands. At each QC step (\ref{fig:4.3}), the RNA had clear pellets, clean spectrophotometric ratios, and the electrophoresis suggested that the RNA were undegraded. The passing samples were then used in subsequent hybridization and enzymatic steps.
 
 \begin{figure}
 \hbox to \textwidth{\hfill
@@ -65,7 +65,7 @@ The libraries were sequenced paired-end over 6 lanes of an Illumina HiSeq 2500, 
 \small
 \includegraphics[width=\textwidth,height=5in]{images/Sequencing/Alignment_reads.png}
 \caption{Sequence Read Processing and Alignment}\label{fig:4.4}
-An average of 50 million reads (25M clusters/pairs; left) was produced for each of the 30 libraries. Ribosomal RNA reads were then filtered (middle left) and the remaining reads were then aligned to the genome (middle right). Of these, 83\% were properly paired reads, ideal for transcriptome assembly.
+An average of 50 million reads (25M clusters/pairs; left) was produced for each of the 30 libraries. Ribosomal RNA reads were then filtered and the remaining reads (middle left) were then aligned to the genome (middle right). Of these, 83\% were properly paired reads (right), ideal for transcriptome assembly.
 \end{figure}
 
 However, the number of reads alone are a poor indicator of the sensitivity of an experiment; the distribution of these data throughout the genome is preferable, but is infrequent in similar studies(\ref{table:study_compare}). To better understand the depth of sequencing, it was desirable to determine the per-base sequencing depth throughout the genome. Two methods are frequently used to quantify and summarize depth. The first approach is referred to as ``fold-coverage,'' calculated by summing the number of sequenced bases divided by the estimated size of the transcriptome or genome. However, the underlying assumption of a uniform distribution of reads is not valid for transcriptomic sequencing. A more precise approach is the second approach, calculating sequencing depth directly. By summing the number of reads aligned to each base, central tendency measures of the resulting distribution are precise estimates of per-base sequencing depth across the genome. No single average sequencing depth is more significant than another (e.g. 10x vs 9x), although increasing depth provides additional terminal reads for transcript boundary identification. 
@@ -76,7 +76,7 @@ In terms of actual sequencing depth, however, requirements for bacterial transcr
 \begin{figure}
 \includegraphics[width=\textwidth]{images/Sequencing/Supplemental/BA-A-75+boxplot.png}
 \caption{Representative Per-base Sequencing Depth}\label{fig:4.5}
-These boxplots show the distribution of per-base sequencing depth throughout the pSOL1 megaplasmid (left) and the \textit{C. acetobutylicum} chromosome (right). The median depth in each library was greater than 10x.
+These boxplots show the distribution of per-base sequencing depth throughout the pSOL1 megaplasmid (left) and the \textit{C. acetobutylicum} chromosome (right) for a single library. The median depth in each library was greater than 10x.
 \end{figure}
 
 A median of > 10x coverage per base and per strand was observed for each of the 30 libraries (\ref{fig:4.5}). Cumulatively, the median per base coverage is 156x throughout the genome(\ref{fig:4.6b}), generally considered very deep. The median depth in truly transcribed regions is greater as shown in the next chapter. To clarify, some of the depth described by this distribution(\ref{fig:4.6b}) was due to previously discussed background signals such as DNA contamination\cite{176} or spurious transcription.\cite{164,165} Background signal is indeed a pressing concern for RNA-seq,\cite{110,176,57} complicating the determination of transcript boundaries. After describing read counts, fold-coverage, and per-base sequencing depth it is clear that this study possesses unprecedented sensitvity for transcriptome mapping.
@@ -86,7 +86,7 @@ A median of > 10x coverage per base and per strand was observed for each of the 
 \begin{center}
 \begin{minipage}{.5\textwidth}
 \begin{center}
-{\includegraphics[width=\linewidth,height=3in]{images/Assembly/Summary/futrlength.png}}
+{\includegraphics[width=\linewidth,height=3in]{images/Assembly/Summary/putrlength.png}}
 \subcaption{5' and 3' Untranslated Region Length}\label{fig:4.6a}
 \end{center}
 \end{minipage}%
