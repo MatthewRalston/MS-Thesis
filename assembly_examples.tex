@@ -108,6 +108,7 @@ BdhA is an NADH-dependent butanol dehydrogenase that acts on both butyryl and ac
 Here we find the transcription start site of bdhA one base upstream at 3,465,241(\ref{fig:5.13b}). The results of transcription start site identification agree well with the upstream Sigma-factor A promoter and the aforementioned start site. The uncurated assembly produces a transcription stop site at base 3,464,329, before the stop codon of BdhA(\ref{fig:5.13c}). The pattern of coverage clearly reflects the Rho-independent terminator nearby. The misassembly could be due to low complexity in the reads mapping to this portion of bdhB, possibly resulting from homology with bdhB. This type of misassembly will be referred to from here on as a ``truncation'' misassembly. The final transcript (\ref{fig:5.13d}) reflects the assembly, coverage pattern, and motifs in this locus, agreeing with the transcription start site and a transcript length of 1,282bp. In this example, the fairly obvious coverage pattern was not reproduced by the assembly, demonstrating the need for some simple curation by integrating knowledge of previous experimental data and genome-wide predictions of promoter and terminator motifs with the coverage pattern and assembly. Next, the paralogous gene BdhB produces a similarly sized transcript.
 %        B d h A
 \begin{figure}
+\footnotesize
 {\includegraphics[width=\textwidth,height=1.5in]{images/Assembly/Examples/Bdh/Bdh-locus.png}
 \subcaption{bdh Locus}\label{fig:5.13a}}
 {\includegraphics[width=\textwidth,height=1.5in]{images/Assembly/Examples/Bdh/BdhA-TSS.png}
@@ -126,7 +127,7 @@ The next gene is bdhB, another NADH-dependent butanol dehydrogenase, with a slig
 The coverage pattern for this region shows at least 3 increases in coverage at 3,463,802, 3,463,813, and 3,463,843 (\ref{fig:5.14a}). The first (proximal) site has a promoter motif upstream, corresponding to the 1$^{st}$ -10 and -35 boxes in \ref{table:1} and the tertiary transcription start site from above\cite{72}. The second site has a significant increase in coverage between residue 3,463,817 and 3,463,810, which match well with the primary transcription start site described above\cite{73}. The primary transcription start site matches the 2$^{nd}$  -35 box and the 2$^{nd}$ or 3$^{rd}$ -10 box motifs\cite{73}. It is clear that the strongest start site is the primary transcription start site previously described\cite{73}, although the multiple bands observed in their analysis could indeed be explained by the additional matches to consensus Sigma-factor A motifs. Additionally, an observable but insignificant increase is correlated with a final promoter motif. It is clear that the raw data match previous results to a good extent but curation was required to correct the transcription start site(\ref{fig:5.14a}) and stop site (\ref{fig:5.14b}). The final transcript is shown in \ref{fig:5.13c} with a final length of 1,367bp or 1,381bp, in close agreement with the published length of 1.35kb.
 
 \begin{table}
-\caption{BdhB Sigma-factor A boxes}\label{table:1}
+
 %\begin{minipage}[b]{2.5in}
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|}\hline
@@ -149,6 +150,7 @@ Motif & Start & End & Sequence & p-value\\\hline
 4 & 3463852 & 3463857 & TATTAT & 4.2\e{-3}\\\hline
 
 \end{tabular}
+\caption{BdhB Sigma-factor A boxes}\label{table:1}
 \end{center}
 %\end{minipage}
 \end{table}
@@ -220,7 +222,7 @@ The first two sites are specifically enriched in the TEX treated library, sugges
 
 
 \begin{table}
-\caption{HrcA Operon Sigma-factor A boxes}\label{table:2}
+
 %\begin{minipage}[b]{2.5in}
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|}\hline
@@ -247,6 +249,7 @@ P3.2 & 1424482 & 1424487 & TAAAAA & 3.2\e{-2}\\
 P4 & 1424537 & 1424542 & TATGAT & 1.9\e{-3}\\
 P5 & 1427430 & 1427435 & TATAGT & 2.5\e{-3}\\\hline
 \end{tabular}
+\caption{HrcA Operon Sigma-factor A boxes}\label{table:2}
 \end{center}
 %\end{minipage}
 \end{table}
@@ -287,7 +290,7 @@ Spo0A is the master regulator of sporulation and stationary phase phenomena. Thi
 
 
 \begin{table}
-\caption{Spo0A Regulatory Motifs}\label{table:3}
+
 %\begin{minipage}[b]{2.5in}
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|}\hline
@@ -307,6 +310,7 @@ Motif & Start & End & Sequence & p-value\\\hline
 1 & 2173430 & 2173436 & TGTCGAA & 1.9\e{-4}\\
 \hline
 \end{tabular}
+\caption{Spo0A Regulatory Motifs}\label{table:3}
 \end{center}
 %\end{minipage}
 \end{table}
