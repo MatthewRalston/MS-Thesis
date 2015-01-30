@@ -79,27 +79,19 @@ In terms of actual sequencing depth, however, requirements for bacterial transcr
 These boxplots show the distribution of per-base sequencing depth throughout the pSOL1 megaplasmid (left) and the \textit{C. acetobutylicum} chromosome (right) for a single library. The median depth in each library was greater than 10x.
 \end{figure}
 
-A median of > 10x coverage per base and per strand was observed for each of the 30 libraries (\ref{fig:4.5}). Cumulatively, the median per base coverage is 156x throughout the genome(\ref{fig:4.6b}), generally considered very deep. The median depth in truly transcribed regions is greater as shown in the next chapter. To clarify, some of the depth described by this distribution(\ref{fig:4.6b}) was due to previously discussed background signals such as DNA contamination\cite{176} or spurious transcription.\cite{164,165} Background signal is indeed a pressing concern for RNA-seq,\cite{110,176,57} complicating the determination of transcript boundaries. After describing read counts, fold-coverage, and per-base sequencing depth it is clear that this study possesses unprecedented sensitvity for transcriptome mapping.
+A median of > 10x coverage per base and per strand was observed for each of the 30 libraries (\ref{fig:4.5}). Cumulatively, the median per base coverage is 156x throughout the genome(\ref{fig:4.6}), generally considered very deep. The median depth in truly transcribed regions is greater as shown in the next chapter. To clarify, some of the depth described by this distribution(\ref{fig:4.6}) was due to previously discussed background signals such as DNA contamination\cite{176} or spurious transcription.\cite{164,165} Background signal is indeed a pressing concern for RNA-seq,\cite{110,176,57} complicating the determination of transcript boundaries. After describing read counts, fold-coverage, and per-base sequencing depth it is clear that this study possesses unprecedented sensitvity for transcriptome mapping.
 
-
-\begin{figure}
-\begin{center}
-\begin{minipage}{.5\textwidth}
-\begin{center}
-{\includegraphics[width=\linewidth,height=3in]{images/Assembly/Summary/putrlength.png}}
-\subcaption{5' and 3' Untranslated Region Length}\label{fig:4.6a}
-\end{center}
-\end{minipage}%
-\begin{minipage}{.5\textwidth}
+\begin{wrapfigure}{l}{0.4\textwidth}
+\small
+\vspace{-20pt}
 \begin{center}
 {\includegraphics[width=\linewidth,height=3in]{images/Sequencing/Cumulative_depth_boxplot.png}}
-\subcaption{Cumulative Depth Distribution}\label{fig:4.6b}
+\caption{Cumulative Depth Boxplot}\label{fig:4.6}
+The distribution of per-base sequencing depth illustrates high sensitivity.
 \end{center}
-\end{minipage}
-\end{center}
-\caption{Coverage Boxplots}
-The distribution of coverage throughout the genome from a single library \subref{fig:4.6a}) is compared to cumulative coverage \subref{fig:4.6b}), showing high depth has been achieved.
-\end{figure}
+\vspace{-20pt}
+\end{wrapfigure}
+
 
 In summary, the data suggested a successful first aim for this project: a quality RNA-seq dataset for subsequent assembly and annotation. The experiment and RNA processing protocol were designed with depth and complexity in mind. Primary transcripts were enriched and contaminants were removed, controlling for RNA purity and integrity after each manipulation. Thirty samples were sequenced over six lanes, resulting in 1.5 billion reads, with 458 million properly-paired reads aligning to the genome. Analysis of the aligned sequences demonstrated consistently high primary transcript enrichment, alignment rates, and sequencing depth. This depth of signal is comparable or superior to many similar studies in prokaryotes and to guidelines for human genome sequencing.
 
