@@ -5,13 +5,13 @@
 %%% End: 
 \section{Resolving Misassembly}
 
-These examples illustrated some common themes for misassemblies throughout the genome, notably the effect of background signal from high depth sequencing. Three types of misassemblies were described: extension, fusion, and truncation. In all cases these errors were resolved by solved by combining signals from sequencing depth and genome annotations. The assembly was fully curated for all pSol1 transcripts (the pSol1 megaplasmid is 5\% of the genome). This section explicitly states the rules and heuristics used for assembly curation. Also, the assembly was analyzed before and after curation to determine the effectiveness of this technique. 
+These examples illustrated some common themes for misassemblies throughout the genome, notably the effect of background signal from high depth sequencing. Three types of misassemblies were described: extension, fusion, and truncation. In all cases these errors were resolved by solved by combining signals from sequencing depth and genome annotations. The assembly was fully curated for all pSol1 transcripts (the pSOL1 megaplasmid is 5\% of the genome). This section explicitly states the rules and heuristics used for assembly curation. Also, the assembly was analyzed before and after curation to determine the effectiveness of this technique. 
 
 The curation process was used in the previous section to address the misassemblies, providing precision transcript boundary estimates. This technique used heuristics to correct transcript boundaries according to depth and annotations in cases where interfering signals result in misassembly. Background signals were defined as extended (typically intergenic or antisense) regions of low depth that frequently conflicted with matching promoter/terminator annotations and large depth fold changes near transcript termini. Briefly, the heuristics are as follows:
 
 \begin{enumerate}
-\item Weak terminators ($\delta$G \textgreater -6kcal/mol) were omitted from analysis.
-\item Weak promoters and TFBSes were excluded from analysis when p \textgreater 1\e{-5}, defined below where p is defined below for upstream and downstream motif matches (e.g. -35 and -10 elements of $\sigma$_{A} promoter). 
+\item Weak terminators ($\Delta$G \textgreater  -5 kcal/mol) were omitted.
+\item Weak promoters and TFBSes were excluded from analysis when p \textgreater 1\e{-5}, defined below for upstream and downstream motif matches (e.g. -35 and -10 elements of $\sigma_{A}$ promoter). 
 \[ p_{promoter} = p_{upstream} \times p_{downstream} \]
 \item Extended transcripts were corrected by shortening or spliting transcripts, such that the resulting transcript(s) captured depth patterns and annotations.
 \item Fused transcripts were similarly addressed, with terminators as an important signal.
@@ -23,14 +23,14 @@ The curation process was used in the previous section to address the misassembli
 \begin{center}
 \begin{tabular}{|c|c|c|}\hline
   & Uncurated & Curated\\\hline\hline
-Transcripts & 181 & 111\\\hline
-Sequenced Mb & 347413 & 192069\\\hline
-Length Range & 202-16389 & 172-11397\\\hline
-CDSes & 155 & 157\\\hline
+Transcripts & 181 & 110\\\hline
+Sequenced kb & 347 & 190\\\hline
+Length Range & 202-16kb & 172-11kb\\\hline
+ORFs & 155 & 157\\\hline
 Standard Transcripts & 59 & 86\\\hline
-Standard Mb & 246926 & 174801\\\hline
+Standard kb & 247 & 175\\\hline
 Novel Transcripts & 122 & 24\\\hline
-Novel Mb & 100487 & 14994\\\hline
+Novel kb & 100 & 15\\\hline
 \end{tabular}
 \end{center}
 \caption{Final Assmelby Statistics and Curation Effect}\label{table:assemb_curation}

@@ -16,14 +16,14 @@ In this comparison, the assemblies were inspected for errors that affect these q
 \begin{center}
 \begin{tabular}{|c|c|c|}\hline
   & All Reads & Proper Pairs\\\hline\hline
-Transcripts & 3054 & 4295\\\hline
+Transcripts & 2874 & 4177\\\hline
 Sequenced Mb & 6.1 & 7.2\\\hline
 Length Range & 200-28kb & 200-35kb\\\hline
-ORFs & 2397 (63\%) & 3225 (85\%)\\\hline
-Standard Transcripts & 796 (27\%) & 1029 (24\%)\\\hline
-Standard Mb & 3.7 (61\%) & 4.56 (63\%)\\\hline
-Novel Transcripts & 2129 (73\%) & 3266 (76\%)\\\hline
-Novel Mb & 2.4 (39\%)& 2.64 (37\%)\\\hline
+ORFs & 2389 (63\%) & 3347 (89\%)\\\hline
+Standard Transcripts & 796 (28\%) & 1057 (25\%)\\\hline
+Standard Mb & 3.7 (61\%) & 4.6 (64\%)\\\hline
+Novel Transcripts & 2082 (72\%) & 3120 (75\%)\\\hline
+Novel Mb & 2.4 (39\%)& 2.6 (36\%)\\\hline
 \end{tabular}
 \end{center}
 \caption{Assembly Comparison: Proper-pairs Produce Large, Inclusive Assemblies}\label{table:assemb_compare}
@@ -32,10 +32,7 @@ This table contains statistics for the two transcriptome assemblies, the first w
 \end{table}
 
 \subsection{Assembly Comparison}
-First, simple statistics were compiled for both assemblies (Table \ref{table:assemb_compare}). The transcripts that contained reference protein annotations (referred to as ``standard'' transcripts), were approximately 25\% by number of assembled transcripts, yet they accounted for 63\% of the assembled basepairs for both datasets. Upon inspection, the assembly from the subset of properly-paired reads was larger and more inclusive, recalling 85\% of the reference ORFs. Also, this assembly had higher per-base sequencing depth in both ``standard'' and ``novel'' transcripts (\ref{fig:5.1}). While the transcript lengths were comparable (\ref{fig:5.2a}), the assembly from all reads had lower expression, size, and inclusiveness of the reference CDSes compared to the subset. Therefore, the transcript coordinates from the uncurated properly-paired assembly were used for further analysis of feature length, UTR length, and expression.
-
-
-
+First, simple statistics were compiled for both assemblies (Table \ref{table:assemb_compare}). The transcripts that contained reference protein annotations (referred to as ``standard'' transcripts), were approximately 25\% by number of assembled transcripts, yet they accounted for 63\% of the assembled basepairs for both datasets. Upon inspection, the assembly from the subset of properly-paired reads was larger and more inclusive, recalling 85\% of the reference ORFs. Also, this assembly had higher per-base sequencing depth in both ``standard'' and ``novel'' transcripts (\ref{fig:5.1}). While the transcript lengths were comparable (\ref{fig:5.2a}), the assembly from the total amount of aligned reads had lower expression, size, and inclusiveness of the reference CDSes compared to the subset. Many factors can cause misassembly errors, not the least of which are discordant reads, which may be handled poorly by the assembly algorithms. While the unpaired reads most likely did not negatively affect the assembly, the 74M additional discordant reads caused errors during the assembly process that lead to misassembled transcripts. Ultimately, the misassemblies decreased the total number of assembled basepairs and the inclusiveness of reference ORFs in the assembly from the total dataset. Therefore, the transcript coordinates from the uncurated properly-paired assembly were used for further analysis of feature length, UTR length, and expression.
 
 \begin{figure}
 \small
